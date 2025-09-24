@@ -1,6 +1,13 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import localFont from 'next/font/local';
 import "./globals.css";
+
+const chillax = localFont({
+  src: '../public/fonts/Chillax-Variable.ttf',
+  variable: '--font-chillax',
+  weight: "100 900",
+});
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -25,7 +32,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${chillax.variable} ${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
       </body>

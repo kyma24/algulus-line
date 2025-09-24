@@ -1,0 +1,48 @@
+.container {
+    width: calc(min(100vw,1000px));
+    aspect-ratio: 2/1;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+}
+
+.scene {
+    width: 100%;
+    perspective: 1000px;
+    perspective-origin: 50% 50%;
+    position: absolute;
+}
+
+.sceneRight {
+    width: 100%;
+    perspective: 1000px;
+    perspective-origin: 0% 50%;
+    position: absolute;
+}
+
+.mountain {
+    background: url("/images/mountain.svg") no-repeat center/contain;
+    width: 50%;
+    aspect-ratio: 2/1;
+    height: auto;
+    position: absolute;
+    transform-style: preserve-3d;
+}
+
+.train {
+    background: url("/images/train.svg") no-repeat center/contain;
+    width: 30%;
+    aspect-ratio: 1/1;
+    height: auto;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1001;
+}
+
+.flip {
+    transform: scaleX(-1);
+}
