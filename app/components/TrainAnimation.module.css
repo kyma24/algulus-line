@@ -1,5 +1,5 @@
 .container {
-    width: calc(min(100vw,1000px));
+    width: 100vw;
     aspect-ratio: 2/1;
     position: absolute;
     left: 50%;
@@ -8,7 +8,7 @@
     overflow: hidden;
 }
 
-.scene {
+.sceneLeft {
     width: 100%;
     perspective: 1000px;
     perspective-origin: 50% 50%;
