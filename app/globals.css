@@ -2,8 +2,8 @@
 @plugin "daisyui";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #100d08;
+  --foreground: #eae5e3;
 }
 
 @theme inline {
@@ -14,11 +14,19 @@
   --font-head: var(--font-chillax);
 }
 
+/*
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #ffffff;
+    --foreground: #171717;
   }
+}
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  gap: 0;
 }
 
 body {
