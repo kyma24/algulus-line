@@ -7,36 +7,58 @@ import styles from './LineScroll.module.css';
 const LineScroll = () => {
 
       const lines = [{
-            /*brown*/
-            d: "M1035 0 L1035 480 L1540 480 M1440 1750 L940 1750",
-            stroke: "#6A3A20", cx: "940", cy: "1750"}, {
-            /*purple*/
-            d: "M945 0 L945 570 L1540 570 M1440 2750 L940 2750",
-            stroke: "#6D4BDC", cx: "940", cy: "2750"}, {
-            /*green*/
-            d: "M855 0 L855 660 L1540 660 M1440 3750 L940 3750",
-            stroke: "#53A754", cx: "940", cy: "3750"}, {
-            /*blue*/
-            d: "M765 0 L765 750 L1540 750 M1440 4750 L940 4750",
-            stroke: "#3884ff", cx: "940", cy: "4750"}, {
-            /*yellow*/
-            d: "M675 0 L675 750 L-100 750 M0 4250 L500 4250",
-            stroke: "#f99f3e", cx: "500", cy: "4250"}, {
-            /*pink*/
-            d: "M585 0 L585 660 L-100 660 M0 3250 L500 3250",
-            stroke: "#DB67BE", cx: "500", cy: "3250"}, {
-            /*orange*/
-            d: "M495 0 L495 570 L-100 570 M0 2250 L500 2250",
-            stroke: "#d92632", cx: "500", cy: "2250"}, {
             /*red*/
             d: "M405 0 L405 480 L-100 480 M0 1250 L500 1250",
-            stroke: "#951b2d", cx: "500", cy: "1250"}
+            stroke: "#951b2d", cx: "500", cy: "1250"}, {
+            /*brown*/
+            d: "M1035 0 L1035 480 L1540 480 M1440 2000 L940 2000",
+            stroke: "#6A3A20", cx: "940", cy: "2000"}, {
+            /*orange*/
+            d: "M495 0 L495 570 L-100 570 M0 2750 L500 2750",
+            stroke: "#d92632", cx: "500", cy: "2750"}, {
+            /*purple*/
+            d: "M945 0 L945 570 L1540 570 M1440 3500 L940 3500",
+            stroke: "#6D4BDC", cx: "940", cy: "3500"}, {
+            /*pink*/
+            d: "M585 0 L585 660 L-100 660 M0 4250 L500 4250",
+            stroke: "#DB67BE", cx: "500", cy: "4250"}, {
+            /*green*/
+            d: "M855 0 L855 660 L1540 660 M1440 5000 L940 5000",
+            stroke: "#53A754", cx: "940", cy: "5000"}, {
+            /*yellow*/
+            d: "M675 0 L675 750 L-100 750 M0 5750 L500 5750",
+            stroke: "#f99f3e", cx: "500", cy: "5750"}, {
+            /*blue*/
+            d: "M765 0 L765 750 L1540 750 M1440 6500 L940 6500",
+            stroke: "#3884ff", cx: "940", cy: "6500"},
+      ];
+
+      const boxes = [{
+            left: "left-[calc(1000/1440*100%)]", top: "top-[calc(1250/7000*100%)]"}, {
+            left: "left-[calc(440/1440*100%)]", top: "top-[calc(2000/7000*100%)]"}, {
+            left: "left-[calc(1000/1440*100%)]", top: "top-[calc(2750/7000*100%)]"}, {
+            left: "left-[calc(440/1440*100%)]", top: "top-[calc(3500/7000*100%)]"}, {
+            left: "left-[calc(1000/1440*100%)]", top: "top-[calc(4250/7000*100%)]"}, {
+            left: "left-[calc(440/1440*100%)]", top: "top-[calc(5000/7000*100%)]"}, {
+            left: "left-[calc(1000/1440*100%)]", top: "top-[calc(5750/7000*100%)]"}, {
+            left: "left-[calc(440/1440*100%)]", top: "top-[calc(6500/7000*100%)]"},
+      ];
+
+      const topics = [{
+            name: "Basic Concepts", }, {
+            name: "Data Structures", }, {
+            name: "General Algorithms", }, {
+            name: "Math", }, {
+            name: "Dynamic Programming", }, {
+            name: "Graph Theory", }, {
+            name: "Trees", }, {
+            name: "Querying", },
       ];
 
       return (
       <div className={`${styles.container} flex justify-center`}>
             <div className={"w-1/1 max-w-5xl"}>
-                  <svg height="100%" width="100%" viewBox="0 0 1440 5250" xmlns="http://www.w3.org/2000/svg">
+                  <svg height="100%" width="100%" viewBox="0 0 1440 7000" xmlns="http://www.w3.org/2000/svg">
                         <defs>
                               <linearGradient id="downFade" x1="0%" y1="0%" x2="0%" y2="100%">
                                     <stop offset="0%" stopColor="var(--background)" />
@@ -72,13 +94,16 @@ const LineScroll = () => {
                         
                         {/* fades */}
                         <rect width="1440" height="500" x="0" y="0" fill="url(#downFade)" />
-                        <rect width="300" height="5250" x="0" y="0" fill="url(#rightFade)" />
-                        <rect width="300" height="5250" x="1140" y="0" fill="url(#leftFade)" />
+                        <rect width="300" height="7000" x="0" y="0" fill="url(#rightFade)" />
+                        <rect width="300" height="7000" x="1140" y="0" fill="url(#leftFade)" />
                   </svg>
             </div>
-            {/* red */}
-            <div className={`${styles.topicBox} absolute top-[calc(1250/5250*100%)] left-[calc(1000/1440*100%)]`}>
-            </div>
+            {boxes.map((box, i) => (
+                  <div key={i} className={`${styles.topicBox} absolute ${box.top} ${box.left}`}>
+                        <p className="text-sm text-[var(--background)] font-[chillax] font-bold">STATION {i}</p>
+                        <h2 className="text-[var(--background)] font-[outfit] font-semibold">{topics[i].name}</h2>
+                  </div>
+            ))}
       </div>
   );
 }

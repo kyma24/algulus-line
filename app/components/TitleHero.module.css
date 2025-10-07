@@ -1,7 +1,7 @@
 .container {
-    background-color: var(--color-foreground);
     width: 100vw;
-    height: 75vh;
+    aspect-ratio: 4607/538;
+    min-height: 75vh;
     position: relative;
     overflow: hidden;
 }
@@ -16,4 +16,18 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.titleBack {
+    background: url("/images/title_white.svg") no-repeat;
+    width: 175%;
+    aspect-ratio: 4607/538;
+    height: auto;
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
 }

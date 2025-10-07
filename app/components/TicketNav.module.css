@@ -1,0 +1,106 @@
+.container {
+    width: 120px;
+    height: 800px;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    overflow: hidden;
+    z-index: 100;
+    text-align: right;
+}
+
+.part {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    aspect-ratio: 1/1;
+}
+
+.navMark {
+    background: url("/images/nav_mark.svg") no-repeat center/contain;
+    animation: float 2s infinite ease-in-out;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.dispenserTop {
+    background: url("/images/dispense_top.svg") no-repeat center/contain;
+    aspect-ratio: 64/42;
+    z-index: 2;
+}
+
+.ticketContainer {
+    position: absolute;
+    top: 80px; left: 50%;
+    transform: translateX(-50%);
+
+    width: 75px;
+    height: 100%;
+    z-index: 1;
+}
+
+.ticket {
+    position: relative;
+    height: calc(min(100% - 80px, 1vh) - 5px);
+    background-color: white;
+    overflow: hidden;
+    transition: height 0.5s ease-in-out;
+}
+
+.ticketEnd {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 75px;
+    aspect-ratio: 64/4;
+    z-index: 10;
+
+    content: "";
+    background: url("/images/ticket_end.svg") no-repeat center/contain;
+}
+
+.button {
+    position: relative;
+    top: 5px; left: 50%;
+    transform: translateX(-50%);
+
+    width: 120px;
+    aspect-ratio: 64/19;
+    
+    content: "";
+    background: url("/images/button_up.svg") no-repeat center/contain;
+}
+
+.buttonDown {
+    background: url("/images/button_down.svg") no-repeat center/contain;
+}
+
+.button:hover {
+    cursor: pointer;
+}
+
+.button:not(.expanded):hover {
+    background: url("/images/button_hover.svg") no-repeat center/contain;
+}
+
+.dispenserBottom {
+    background: url("/images/dispense_bottom.svg") no-repeat center/contain;
+    z-index: 0;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+}

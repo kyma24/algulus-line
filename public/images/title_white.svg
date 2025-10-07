@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4607 538">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke-width: 80px;
+      }
+
+      .cls-1, .cls-2 {
+        stroke: #bdc2cb;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+
+      .cls-2 {
+        fill: #bdc2cb;
+        stroke-width: 52px;
+      }
+    </style>
+  </defs>
+  <g id="Layer_3" data-name="Layer 3">
+    <g>
+      <polyline class="cls-1" points="40 62 1408 53 1408 485"/>
+      <line class="cls-1" x1="1264" y1="125" x2="1264" y2="377"/>
+      <line class="cls-1" x1="1408" y1="161" x2="1264" y2="161"/>
+      <line class="cls-1" x1="1480" y1="53" x2="1480" y2="413"/>
+      <line class="cls-1" x1="1336" y1="377" x2="1696" y2="377"/>
+      <path class="cls-1" d="M1660,89v136c0,44.18,35.82,80,80,80h64"/>
+      <polyline class="cls-1" points="1804 233 1804 485 1516 485"/>
+      <line class="cls-1" x1="2020" y1="161" x2="2020" y2="449"/>
+      <line class="cls-1" x1="2092" y1="53" x2="2092" y2="413"/>
+      <line class="cls-1" x1="2416" y1="91.66" x2="2416" y2="377"/>
+      <path class="cls-1" d="M2632,125h0c0-39.76-32.24-72-72-72h-72v280c0,44.18,35.82,80,80,80h0c35.35,0,64,28.65,64,64v8"/>
+      <line class="cls-1" x1="2416" y1="485" x2="4567" y2="485"/>
+      <circle class="cls-2" cx="1408" cy="53" r="27"/>
+      <circle class="cls-2" cx="1804" cy="485" r="27"/>
+      <circle class="cls-2" cx="2488" cy="53" r="27"/>
+      <circle class="cls-2" cx="2632" cy="485" r="27"/>
+      <path class="cls-1" d="M1660,125h216v172c0,44.18,35.82,80,80,80h352"/>
+      <circle class="cls-2" cx="1876" cy="125" r="27"/>
+      <circle class="cls-2" cx="2092" cy="377" r="27"/>
+      <path class="cls-1" d="M2164,53h36s72,0,72,0v172c0,44.18,35.82,80,80,80h136"/>
+      <circle class="cls-2" cx="2272" cy="53" r="27"/>
+      <circle class="cls-2" cx="1660" cy="125" r="27"/>
+      <circle class="cls-2" cx="1480" cy="377" r="27"/>
+      <circle class="cls-2" cx="2416" cy="305" r="27"/>
+    </g>
+  </g>
+</svg>

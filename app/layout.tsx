@@ -9,6 +9,12 @@ const chillax = localFont({
   weight: "100 900",
 });
 
+const outfit = localFont({
+  src: '../public/fonts/Outfit-Variable.ttf',
+  variable: '--font-outfit',
+  weight: "100 900",
+});
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
