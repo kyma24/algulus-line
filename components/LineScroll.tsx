@@ -3,19 +3,20 @@
 import { motion, useAnimationFrame } from "framer-motion";
 import React, { useEffect, useRef } from 'react';
 import styles from './LineScroll.module.css';
+import Link from "next/link";
 
 const LineScroll = () => {
 
       const lines = [{
             /*red*/
             d: "M405 0 L405 480 L-100 480 M0 1250 L500 1250",
-            stroke: "#951b2d", cx: "500", cy: "1250"}, {
+            stroke: "#d92632", cx: "500", cy: "1250"}, {
             /*brown*/
             d: "M1035 0 L1035 480 L1540 480 M1440 2000 L940 2000",
-            stroke: "#6A3A20", cx: "940", cy: "2000"}, {
+            stroke: "#933310", cx: "940", cy: "2000"}, {
             /*orange*/
             d: "M495 0 L495 570 L-100 570 M0 2750 L500 2750",
-            stroke: "#d92632", cx: "500", cy: "2750"}, {
+            stroke: "#EC5809", cx: "500", cy: "2750"}, {
             /*purple*/
             d: "M945 0 L945 570 L1540 570 M1440 3500 L940 3500",
             stroke: "#6D4BDC", cx: "940", cy: "3500"}, {
@@ -45,14 +46,14 @@ const LineScroll = () => {
       ];
 
       const topics = [{
-            name: "Basic Concepts", }, {
-            name: "Data Structures", }, {
-            name: "General Algorithms", }, {
-            name: "Math", }, {
-            name: "Dynamic Programming", }, {
-            name: "Graph Theory", }, {
-            name: "Trees", }, {
-            name: "Querying", },
+            name: "Basic Concepts", href: "/basic-concepts", subtopics: ["Big O", "Logic"]}, {
+            name: "Data Structures", href: "/data-structures", subtopics: ["Array", "List", "Set", "Stack", "Queue", "Map"]}, {
+            name: "General Algorithms", href: "/general-algorithms", subtopics: ["Sorting", "Searching"]}, {
+            name: "Math", href: "/math", subtopics: ["Bit Manipulation", "Combinatorics", "Geometry", "Modular Arithmetic", "Number Theory"]}, {
+            name: "Dynamic Programming", href: "/dynamic-programming", subtopics: ["Optimization", "Approaches", "Knapsack", "Grid", "LIS", "Bitmask", "Range", "Digit"]}, {
+            name: "Graph Theory", href: "/graph-theory", subtopics: ["Undirected", "Directed", "Traversal", "Connected Components", "Min/Max Spanning Tree", "Cycles", "Shortest Path", "Topological Order", "Bipartition", "Flow"]}, {
+            name: "Trees", href: "/trees", subtopics: ["Traversal", "Diameter", "Subtrees", "Binary Tree", "Lowest Common Ancestor", "Decompositions"]}, {
+            name: "Querying", href: "/querying", subtopics: ["Range Queries", "Point Update Point Query", "Point Update Range Query", "Range Update Point Query", "Range Update Range Query"]},
       ];
 
       return (
@@ -100,8 +101,16 @@ const LineScroll = () => {
             </div>
             {boxes.map((box, i) => (
                   <div key={i} className={`${styles.topicBox} absolute ${box.top} ${box.left}`}>
-                        <p className="text-sm text-[var(--background)] font-[chillax] font-bold">STATION {i}</p>
-                        <h2 className="text-[var(--background)] font-[outfit] font-semibold">{topics[i].name}</h2>
+                        <div>
+                              <p className={`${styles.fontSmall} font-[chillax] font-bold`}>STATION {i}</p>
+                              <h2 className={`${styles.fontBig} font-[outfit] font-semibold`}>{topics[i].name}</h2>
+                        </div>
+                        <div className="flex flex-row flex-wrap font-[outfit] font-medium">
+                              {topics[i].subtopics.map((topic, j) => (
+                                    (j<topics[i].subtopics.length-1) ? (topic + " • ") : (topic)
+                              ))}
+                        </div>
+                        <Link className={`${styles.button} font-[chillax] font-bold rounded-3xl bg-[#A4ABB7]`} href={topics[i].href}>START</Link>
                   </div>
             ))}
       </div>
