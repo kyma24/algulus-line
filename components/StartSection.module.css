@@ -5,7 +5,10 @@
 
     aspect-ratio: 2/1;
 
-    background-color: #bdc2cb;
+    background: #bdc2cb;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    
     border-radius: 10px;
     z-index: 1;
 }
@@ -13,7 +16,9 @@
 .mainSection {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
     
     padding: 20px;
     color: var(--color-background);

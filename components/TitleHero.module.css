@@ -1,33 +1,25 @@
 .container {
-    width: 100vw;
+    height: 100%;
+    width: 175px;
     aspect-ratio: 4607/538;
-    min-height: 75vh;
     position: relative;
     overflow: hidden;
 }
 
 .title {
     background: url("/images/title.svg") no-repeat;
-    width: 175%;
+    height: 60%;
     aspect-ratio: 4567/498;
-    height: auto;
     
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 55%;
+    left: 65%;
     transform: translate(-50%, -50%);
     z-index: 1;
 }
 
-.titleBack {
-    background: url("/images/title_white.svg") no-repeat;
-    width: 175%;
-    aspect-ratio: 4607/538;
-    height: auto;
-    
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 0;
+@media (max-width: 600px) {
+    .container {
+        display: none;
+    }
 }

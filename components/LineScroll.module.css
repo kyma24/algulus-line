@@ -96,9 +96,12 @@
     padding: 10px;
     color: var(--color-background);
     border: 2px solid #989FAE;
+    box-shadow: 0 5px 0 0 var(--color-background);
     transition: 0.5s ease;
 }
 
 .button:hover {
     background-color: #989FAE;
+    box-shadow: none;
+    transform: translateY(5px);
 }

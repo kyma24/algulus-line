@@ -8,11 +8,11 @@ const StartSection = () => {
         <div className={`${styles.layered} top-[87.5vh] w-7/12 max-w-[525px] opacity-50`} />
         <div className={`${styles.layered} ${styles.mainSection} top-[90vh] w-2/3 max-w-[600px] text-center`}>
             <div>
-                <p className="text-3xl font-[outfit] font-bold">Welcome to</p>
-                <p className="text-5xl font-[outfit] font-semibold">Algulus Line.</p>
+                <p className="text-xl md:text-3xl font-[outfit] font-bold">Welcome to</p>
+                <p className="text-4xl md:text-5xl font-[outfit] font-semibold">Algulus Line.</p>
             </div>
-            <p className="text-xl font-[outfit] font-normal">
-                [placeholder text]
+            <p className="text-base md:text-xl font-[outfit] font-normal">
+                Join me on my <strong>personal exploration</strong> of coding.
             </p>
         </div>
     </div>
