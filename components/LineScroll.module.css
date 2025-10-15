@@ -17,7 +17,7 @@
 }
 
 .stop:hover {
-    cursor: pointer;
+    cursor: crosshair;
 }
 
 .stop:hover .ripple {
@@ -104,4 +104,19 @@
     background-color: #989FAE;
     box-shadow: none;
     transform: translateY(5px);
+}
+
+.pin {
+    background: url("/images/pin.svg");
+    height: 150px;
+    aspect-ratio: 1/1;
+    transform: translate(-20px, -10px);
+}
+
+.pinShow {
+    display: block;
+}
+
+.pinHide {
+    display: none;
 }

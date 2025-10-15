@@ -1,0 +1,96 @@
+.container {
+    width: 100vw;
+    height: 100vh;
+    
+    display: flex;
+    flex-direction: column;
+}
+
+.interface {
+    position: relative;
+    width: 100vw;
+
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+}
+
+.sidebar {
+    height: 100%;
+    width: 80px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 20px;
+}
+
+.navButton {
+    width: 100%;
+    aspect-ratio: 1 /1;
+
+    cursor: pointer;
+}
+
+.panel {
+    height: 100%;
+    width: 250px;
+    overflow: hidden;
+    background: #bdc2cb30;
+}
+
+.panelOpen {
+    display: block;
+    /*animation: panelOpenAnimation 1s forwards;*/
+}
+
+@keyframes panelOpenAnimation {
+    0% { 
+        width: 0px;
+    }
+    100% {
+        width: 300px;
+    }
+}
+
+.panelClosed {
+    display: none;
+    /*animation: panelClosedAnimation 1s forwards;*/
+}
+
+@keyframes panelClosedAnimation {
+    0% {
+        width: 300px;
+    }
+    100% {
+        width: 0px;
+    }
+}
+
+.bar {
+    height: 30px;
+    width: 100%;
+
+    padding-left: 10px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: #bdc2cb30;
+}
+
+.board {
+    height: 100%;
+    width: calc((100% - 80px)/2);
+    flex-grow: 1;
+    background: #bdc2cb1a;
+}
+
+.hierarchy {
+    padding-top: 10px;
+}

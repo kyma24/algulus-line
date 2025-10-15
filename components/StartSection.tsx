@@ -12,7 +12,7 @@ const StartSection = () => {
                 <p className="text-4xl md:text-5xl font-[outfit] font-semibold">Algulus Line.</p>
             </div>
             <p className="text-base md:text-xl font-[outfit] font-normal">
-                Join me on my <strong>personal exploration</strong> of coding.
+                Join me on my <strong>personal exploration</strong> of coding!
             </p>
         </div>
     </div>

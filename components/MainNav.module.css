@@ -59,10 +59,18 @@
 }
 
 .link:hover {
-    background-color: var(--color-background);
-    color: #bdc2cb;
+    background-color: #bdc2cb;
     box-shadow: none;
     transform: translateY(5px);
+}
+
+.currentLink {
+    background-color: #bdc2cb;
+    box-shadow: none;
+    transform: translateY(5px);
+    /*padding-top: 5px;
+    padding-bottom: 5px;
+    border: 5px inset var(--color-background);*/
 }
 
 .face {
@@ -75,4 +83,10 @@
     top: 75%;
     left: 50%;
     transform: translate(-50%, -75%);
+}
+
+@media (max-width: 600px) {
+    .hideable {
+        display: none;
+    }
 }

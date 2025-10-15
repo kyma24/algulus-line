@@ -1,0 +1,37 @@
+.container {
+    width: 100%;
+    height: fit-content;
+
+    display: flex;
+    flex-direction: column;
+
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.bar {
+    padding-left: 10px;
+    transition: 0.1s ease;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.bar:hover {
+    cursor: pointer;
+    background: #bdc2cb1a;
+}
+
+.selected {
+}
+
+.menu {
+    margin-left: 20px;
+}
+
+.caret {
+    height: auto;
+    aspect-ratio: 1/1;
+    background-color: #bdc2cb2a;
+}

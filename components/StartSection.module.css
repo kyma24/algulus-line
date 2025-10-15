@@ -6,8 +6,6 @@
     aspect-ratio: 2/1;
 
     background: #bdc2cb;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
     
     border-radius: 10px;
     z-index: 1;
