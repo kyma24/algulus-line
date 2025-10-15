@@ -3,6 +3,8 @@
 import { useEffect, useState } from "react";
 import { GuideContent } from "@/utils/getContent";
 
+import styles from "./GuideMarkdown.module.css";
+
 import ReactMarkdown from "react-markdown";
 
 export default function MarkdownSection({slug}: {slug: string}) {
@@ -18,7 +20,7 @@ export default function MarkdownSection({slug}: {slug: string}) {
     if(!content) return (<p>Loading...</p>);
 
     return (
-        <article className="prose mx-auto">
+        <article className={`${styles.container} prose mx-auto`}>
             <h1>{content.title}</h1>
             <ReactMarkdown>
                 {content.content}

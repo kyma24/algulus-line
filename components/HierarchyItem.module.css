@@ -34,4 +34,5 @@
     height: auto;
     aspect-ratio: 1/1;
     background-color: #bdc2cb2a;
+    z-index: 100;
 }

@@ -12,8 +12,10 @@ export type GuideContent = {
 
 export function getContentBySlug(slug: string) {
     try {
-        const filePath = path.join(contentPath, `${slug}.md`);
+        const slugArray = Array.isArray(slug) ? slug : [slug];
+        const filePath = path.join(contentPath, ...slugArray)+".md";
         const file = fs.readFileSync(filePath, "utf-8");
+        
         const {data, content} = matter(file);
         return { title: data.title, tags: data.tags ?? [], content };
     } catch(err) {

@@ -5,9 +5,10 @@ interface DropdownProps {
   name: string;
   children?: ReactNode;
   isSelected: boolean;
+  onClick?: () => void;
 }
 
-const HierarchyDrop = ({name, children, isSelected}: DropdownProps) => {
+const HierarchyDrop = ({name, children, isSelected, onClick}: DropdownProps) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => {
@@ -17,7 +18,7 @@ const HierarchyDrop = ({name, children, isSelected}: DropdownProps) => {
   if(React.Children.count(children)>0) {
     return (
       <div className={styles.container}>
-        <div className={styles.bar}>
+        <div className={styles.bar} onClick={onClick}>
           <p className="font-[outfit]">{name}</p>
           <div 
             className={`${styles.caret}`}
@@ -32,7 +33,7 @@ const HierarchyDrop = ({name, children, isSelected}: DropdownProps) => {
   else {
     return (
       <div className={styles.container}>
-        <div className={`${styles.bar} ${(isSelected)?styles.selected:""}`}>
+        <div className={`${styles.bar} ${(isSelected)?styles.selected:""}`} onClick={onClick}>
           <p className="font-[outfit]">{name}</p>
         </div>
       </div>
