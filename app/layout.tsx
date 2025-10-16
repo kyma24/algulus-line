@@ -15,6 +15,18 @@ const outfit = localFont({
   weight: "100 900",
 });
 
+const hind = localFont({
+  src: '../public/fonts/Hind-Variable.ttf',
+  variable: '--font-hind',
+  weight: "100 900",
+});
+
+const author = localFont({
+  src: '../public/fonts/Author-Variable.ttf',
+  variable: '--font-author',
+  weight: "100 900",
+});
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -38,7 +50,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${chillax.variable} ${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${chillax.variable} ${outfit.variable} ${author.variable} ${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
       </body>

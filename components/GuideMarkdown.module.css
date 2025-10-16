@@ -1,12 +1,24 @@
 .container {
-    font-family: Outfit;
-    padding: 10px 20px 10px 20px;
+    font-family: Author;
+    font-size: 16px;
+    color: #989FAE;
+    padding: 20px;
 }
 
 .container h1 {
-    font-family: Chillax;
+    font-family: Outfit;
+    color: #bdc2cb;
 }
 
 .container h2 {
-    font-family: Arial;
+    color: #bdc2cb;
+}
+
+.container ul {
+    margin-left: 16px;
+}
+
+.container p {
+    line-height: 1.5;
+    margin-bottom: 5px;
 }

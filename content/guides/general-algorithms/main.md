@@ -1,5 +1,7 @@
 ---
-title: "General Algorithms"
+title: "Station 2"
 ---
+## General Algorithms
+<br>
 
-## Hi!
+These are the basic algorithms that can be found everywhere.

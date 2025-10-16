@@ -28,7 +28,8 @@ const page = () => {
     setSubsub(-1);
   };
 
-  const handleSubsub = (id: number) => {
+  const handleSubsub = (parent: number, id: number) => {
+    setSubtopicID(parent);
     setSubsub(id);
   };
 
@@ -41,7 +42,7 @@ const page = () => {
     slug += "/" + topics[topicID].subtopicSlugs[subtopicID];
     if(subsub<0) return slug+"/main";
 
-    slug += "/" + topics[topicID].subsub[subtopicID][subsub];
+    slug += "/" + topics[topicID].subsubSlugs[subtopicID][subsub];
     return slug+"/main";
   };
 
@@ -60,14 +61,14 @@ const page = () => {
                 className={styles.navButton}
                 onClick={() => handleSideOpen(i)}>
                   <div className={`w-1/1 aspect-square`} style={{ backgroundColor: topics[i].color }}/>
-                  <p className="text-sm text-white font-[outfit] font-semibold">{topics[i].short}</p>
+                  <p className="text-sm text-[#bdc2cb] font-[outfit] font-semibold">{topics[i].short}</p>
               </button>
             ))}
           </div>
 
           <div className={`${styles.panel} ${panelOpen ? styles.panelOpen : styles.panelClosed}`}>
             <div className={styles.bar}>
-              <p className="text-base text-gray-900 font-[chillax] font-bold">
+              <p className="text-base text-gray-950 font-[chillax] font-bold">
                 {(topicID>=0)?topics[topicID].name:""}
               </p>
               <button 
@@ -78,9 +79,9 @@ const page = () => {
             <div className={styles.hierarchy}>
               {(topicID>=0)?
               topics[topicID].subtopics.map((subtopic, i) => (
-                <HierarchyItem key={i} name={subtopic} isSelected={false} onClick={() => handleSubtopic(i)}>
+                <HierarchyItem key={i} name={subtopic} isSelected={(subtopicID==i)&&(subsub<0)} onClick={() => handleSubtopic(i)}>
                   {topics[topicID].subsub[i].map((concept, j) => (
-                    <HierarchyItem key={j} name={concept} isSelected={false} onClick={() => handleSubsub(j)} />
+                    <HierarchyItem key={j} name={concept} isSelected={((subtopicID==i)&&(subsub==j))} onClick={() => handleSubsub(i,j)} />
                   ))}
                 </HierarchyItem>
               ))

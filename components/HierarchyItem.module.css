@@ -16,6 +16,8 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+
+    text-overflow: ellipsis;
 }
 
 .bar:hover {
@@ -24,6 +26,7 @@
 }
 
 .selected {
+    background: #bdc2cb1a;
 }
 
 .menu {

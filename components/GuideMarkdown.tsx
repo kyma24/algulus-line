@@ -6,6 +6,7 @@ import { GuideContent } from "@/utils/getContent";
 import styles from "./GuideMarkdown.module.css";
 
 import ReactMarkdown from "react-markdown";
+import rehypeRaw from "rehype-raw";
 
 export default function MarkdownSection({slug}: {slug: string}) {
     const [content, setContent] = useState<GuideContent | null>(null);
@@ -17,12 +18,18 @@ export default function MarkdownSection({slug}: {slug: string}) {
             .catch((err) => console.error("Error: ", err));
     }, [slug]);
 
-    if(!content) return (<p>Loading...</p>);
+    console.log(slug);
+
+    if(!content) return (
+        <div className={`${styles.container}`}>
+            <p>Loading...</p>
+        </div>
+    );
 
     return (
         <article className={`${styles.container} prose mx-auto`}>
             <h1>{content.title}</h1>
-            <ReactMarkdown>
+            <ReactMarkdown rehypePlugins={[rehypeRaw]}>
                 {content.content}
             </ReactMarkdown>
         </article>

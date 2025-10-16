@@ -1,18 +1,12 @@
 ---
-title: "test"
-tags: ["test"]
+title: "Training Page"
+tags: []
 ---
 
-## Hi!
+<br>
 
-Welcome! This is a test.
+## Welcome!
 
-Sample sample.
+This is where you'll find guides to individual concepts.
 
-- Hihi
-- Hello
-- Hey
-
-```js
-console.log("sick")
-```
+Click on a box to the right to begin.

@@ -1,5 +1,7 @@
 ---
-title: "Basic Concepts"
+title: "Station 0"
 ---
+## Basic Concepts
+<br>
 
-## Hi!
+These are the fundamentals of programming. 
