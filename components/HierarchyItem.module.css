@@ -9,15 +9,18 @@
     -webkit-user-select: none;
 }
 
-.bar {
-    padding-left: 10px;
-    transition: 0.1s ease;
-
+.row {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+}
 
+.bar {
+    padding-left: 10px;
+    transition: 0.1s ease;
+    flex-grow: 1;
     text-overflow: ellipsis;
+    transition: 0s;
 }
 
 .bar:hover {
@@ -36,6 +39,12 @@
 .caret {
     height: auto;
     aspect-ratio: 1/1;
-    background-color: #bdc2cb2a;
+    background-color: #bdc2cb30;
     z-index: 100;
+    transition: 0.3s ease;
+}
+
+.caret:hover {
+    cursor: pointer;
+    background-color: #bdc2cb50;
 }

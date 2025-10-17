@@ -18,8 +18,10 @@ const HierarchyDrop = ({name, children, isSelected, onClick}: DropdownProps) => 
   if(React.Children.count(children)>0) {
     return (
       <div className={styles.container}>
-        <div className={`${styles.bar} ${(isSelected)?styles.selected:""}`} onClick={onClick}>
-          <p className="text-base text-[#bdc2cb] font-[outfit] font-medium">{name}</p>
+        <div className={`${styles.row}`}>
+          <div className={`${styles.bar} ${(isSelected)?styles.selected:""}`} onClick={onClick}>
+            <p className="text-base text-[#bdc2cb] font-[outfit] font-medium">{name}</p>
+          </div>
           <div 
             className={`${styles.caret}`}
             onClick={toggle} />

@@ -12,37 +12,47 @@ import GuideMarkdown from '@/components/GuideMarkdown';
 
 const page = () => {
   const [panelOpen, setPanelOpen] = useState(false);
+  const [IDs, setIDs] = useState([-1, -1, -1]);
   const [topicID, setTopicID] = useState(-1);
-  const [subtopicID, setSubtopicID] = useState(-1);
-  const [subsub, setSubsub] = useState(-1);
 
   const handleSideOpen = (id: number) => {
-    setPanelOpen(true);
+    if(!panelOpen) setPanelOpen(true);
     setTopicID(id);
-    setSubtopicID(-1);
-    setSubsub(-1);
   };
 
   const handleSubtopic = (id: number) => {
-    setSubtopicID(id);
-    setSubsub(-1);
+    setIDs([topicID, id, -1]);
   };
 
   const handleSubsub = (parent: number, id: number) => {
-    setSubtopicID(parent);
-    setSubsub(id);
+    setIDs([topicID, parent, id]);
   };
 
   const getCurrentSlug = () => {
-    if(topicID<0) return "default";
+    /* if(IDs[0]<0) return ["default"];
 
-    var slug = topics[topicID].slug;
-    if(subtopicID<0) return slug+"/main";
+    var slug = [topics[IDs[0]].slug];
+    if(IDs[1]<0) return ["default"];
 
-    slug += "/" + topics[topicID].subtopicSlugs[subtopicID];
-    if(subsub<0) return slug+"/main";
+    slug.push(topics[IDs[0]].subtopicSlugs[IDs[1]]);
+    if(IDs[2]<0) {
+      slug.push("/main");
+      return slug;
+    }
 
-    slug += "/" + topics[topicID].subsubSlugs[subtopicID][subsub];
+    slug.push(topics[IDs[0]].subsubSlugs[IDs[1]][IDs[2]]);
+    slug.push("/main");
+    return slug; */
+
+    if(IDs[0]<0) return "default";
+
+    var slug = topics[IDs[0]].slug;
+    if(IDs[1]<0) return "default";
+
+    slug += '/'+topics[IDs[0]].subtopicSlugs[IDs[1]];
+    if(IDs[2]<0) return slug+"/main";
+
+    slug += '/'+topics[IDs[0]].subsubSlugs[IDs[1]][IDs[2]];
     return slug+"/main";
   };
 
@@ -66,30 +76,33 @@ const page = () => {
             ))}
           </div>
 
-          <div className={`${styles.panel} ${panelOpen ? styles.panelOpen : styles.panelClosed}`}>
-            <div className={styles.bar}>
-              <p className="text-base text-gray-950 font-[chillax] font-bold">
-                {(topicID>=0)?topics[topicID].name:""}
-              </p>
-              <button 
-                className="h-1/1 aspect-square bg-red-700 hover:cursor-pointer"
-                onClick={() => setPanelOpen(false)} />
-            </div>
-            
-            <div className={styles.hierarchy}>
-              {(topicID>=0)?
-              topics[topicID].subtopics.map((subtopic, i) => (
-                <HierarchyItem key={i} name={subtopic} isSelected={(subtopicID==i)&&(subsub<0)} onClick={() => handleSubtopic(i)}>
-                  {topics[topicID].subsub[i].map((concept, j) => (
-                    <HierarchyItem key={j} name={concept} isSelected={((subtopicID==i)&&(subsub==j))} onClick={() => handleSubsub(i,j)} />
-                  ))}
-                </HierarchyItem>
-              ))
-              :""}
-            </div>
-          </div>
-
           <div className={styles.board}>
+
+            <div className={styles.maskWrapper}>
+              <div className={`${styles.panel} ${panelOpen ? styles.panelOpen : styles.panelClosed}`}>
+                <div className={styles.bar}>
+                  <p className="text-base text-[#989FAE] font-[chillax] font-bold">
+                    {(topicID>=0)?topics[topicID].name:""}
+                  </p>
+                  <button 
+                    className="h-1/1 aspect-square bg-red-700 hover:cursor-pointer"
+                    onClick={() => setPanelOpen(false)} />
+                </div>
+                
+                <div className={styles.hierarchy}>
+                  {(topicID>=0)?
+                  topics[topicID].subtopics.map((subtopic, i) => (
+                    <HierarchyItem key={i} name={subtopic} isSelected={(IDs[0]==topicID)&&(IDs[1]==i)&&(IDs[2]<0)} onClick={() => handleSubtopic(i)}>
+                      {topics[topicID].subsub[i].map((concept, j) => (
+                        <HierarchyItem key={j} name={concept} isSelected={(IDs[0]==topicID)&&(IDs[1]==i)&&(IDs[2]==j)} onClick={() => handleSubsub(i,j)} />
+                      ))}
+                    </HierarchyItem>
+                  ))
+                  :""}
+                </div>
+              </div>
+            </div>
+
             <GuideMarkdown slug={getCurrentSlug()} />
           </div>
 

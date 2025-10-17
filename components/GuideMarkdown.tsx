@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { GuideContent } from "@/utils/getContent";
 
 import styles from "./GuideMarkdown.module.css";
+import markdownComponents from "./markdownComponents";
 
 import ReactMarkdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
@@ -29,7 +30,7 @@ export default function MarkdownSection({slug}: {slug: string}) {
     return (
         <article className={`${styles.container} prose mx-auto`}>
             <h1>{content.title}</h1>
-            <ReactMarkdown rehypePlugins={[rehypeRaw]}>
+            <ReactMarkdown rehypePlugins={[rehypeRaw]} components={markdownComponents}>
                 {content.content}
             </ReactMarkdown>
         </article>

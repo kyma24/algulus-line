@@ -3,14 +3,12 @@
     font-size: 16px;
     color: #989FAE;
     padding: 20px;
+    height: 100%;
+    text-overflow: scroll;
 }
 
 .container h1 {
     font-family: Outfit;
-    color: #bdc2cb;
-}
-
-.container h2 {
     color: #bdc2cb;
 }
 

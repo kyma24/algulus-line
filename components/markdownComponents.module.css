@@ -1,0 +1,61 @@
+.h1 {
+    font-family: Outfit;
+    color: #bdc2cb;
+}
+
+.h2 {
+    font-family: Author;
+    color: #bdc2cb;
+    font-size: 24px;
+}
+
+.h3 {
+    font-family: Author;
+    color: #bdc2cb;
+}
+
+.h4 {
+    font-family: Author;
+    color: #bdc2cb;
+}
+
+.h5 {
+    font-family: Author;
+    color: #bdc2cb;
+}
+
+.h6 {
+    font-family: Author;
+    color: #bdc2cb;
+}
+
+.p {
+    font-family: Outfit;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.strong {
+}
+
+.em {
+}
+
+.br {
+    display: block;
+    margin-top: 15px;
+}
+
+.gap {
+    display: block;
+    margin-top: 20px;
+}
+
+.blockquote {
+}
+
+.ul {
+}
+
+.ol {
+}
