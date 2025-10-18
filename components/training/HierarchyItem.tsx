@@ -1,14 +1,16 @@
 import React, { ReactNode, useState } from 'react';
 import styles from "./HierarchyItem.module.css";
+import Link from 'next/link';
 
 interface DropdownProps {
   name: string;
+  slug: string;
   children?: ReactNode;
   isSelected: boolean;
   onClick?: () => void;
 }
 
-const HierarchyDrop = ({name, children, isSelected, onClick}: DropdownProps) => {
+const HierarchyItem = ({name, slug, children, isSelected, onClick}: DropdownProps) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => {
@@ -19,9 +21,12 @@ const HierarchyDrop = ({name, children, isSelected, onClick}: DropdownProps) => 
     return (
       <div className={styles.container}>
         <div className={`${styles.row}`}>
-          <div className={`${styles.bar} ${(isSelected)?styles.selected:""}`} onClick={onClick}>
+          <Link 
+            href={`/training/${slug}`}
+            className={`${styles.bar} ${(isSelected)?styles.selected:""}`} 
+            onClick={onClick}>
             <p className="text-base text-[#bdc2cb] font-[outfit] font-medium">{name}</p>
-          </div>
+          </Link>
           <div 
             className={`${styles.caret}`}
             onClick={toggle} />
@@ -35,12 +40,15 @@ const HierarchyDrop = ({name, children, isSelected, onClick}: DropdownProps) => 
   else {
     return (
       <div className={styles.container}>
-        <div className={`${styles.bar} ${(isSelected)?styles.selected:""}`} onClick={onClick}>
+        <Link 
+          href={`/training/${slug}`}
+          className={`${styles.bar} ${(isSelected)?styles.selected:""}`} 
+          onClick={onClick}>
           <p className="text-base text-[#bdc2cb] font-[outfit] font-medium">{name}</p>
-        </div>
+        </Link>
       </div>
     );
   }
 };
 
-export default HierarchyDrop;
+export default HierarchyItem;
