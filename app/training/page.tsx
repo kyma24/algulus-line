@@ -1,10 +1,9 @@
 import MainNav from '@/components/MainNav';
-import React, { useState } from 'react';
+import React from 'react';
 import styles from "./training.module.css";
 
-import { topics } from "../../constants/topics";
 import GuideMarkdown from '@/components/training/GuideMarkdown';
-import TopicSidenav from '@/components/training/TopicSidenav';
+import {TopicSidenav} from '@/components/training/TopicSidenav';
 
 const page = () => {
 

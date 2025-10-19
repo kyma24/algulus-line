@@ -4,7 +4,7 @@
     color: #989FAE;
     padding: 20px;
     height: 100%;
-    text-overflow: scroll;
+    max-width: 100%;
 }
 
 .container h1 {

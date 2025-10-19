@@ -2,6 +2,9 @@ import React, { ReactNode } from 'react';
 import { Components } from 'react-markdown';
 import styles from './markdownComponents.module.css';
 
+import {Prism as SyntaxHighlighter} from "react-syntax-highlighter";
+import { vscDarkPlus } from "react-syntax-highlighter/dist/esm/styles/prism";
+
 const markdownComponents : Components = {
   h1: (props) => (<h1 className={styles.h1} {...props} />),
   h2: (props) => (<h2 className={styles.h2} {...props} />),
@@ -16,6 +19,24 @@ const markdownComponents : Components = {
   blockquote: (props) => (<blockquote className={styles.blockquote} {...props} />),
   ul: (props) => (<ul className={styles.ul} {...props} />),
   ol: (props) => (<ol className={styles.ol} {...props} />),
+  code({className,children,...props}:any) {
+    const match = /language-(\w+)/.exec(className||'');
+    return match ? (
+      <SyntaxHighlighter 
+        className={styles.code}
+        style={vscDarkPlus} 
+        PreTag="div" 
+        language={match[1]} 
+        showLineNumbers
+        {...props}>
+
+        {String(children).replace(/\n$/,'')}
+
+      </SyntaxHighlighter>
+    ) : (
+      <code className={styles.code} {...props}>{children}</code>
+    )
+  },
 };
 
 export default markdownComponents;

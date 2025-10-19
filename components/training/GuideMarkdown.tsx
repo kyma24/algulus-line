@@ -10,8 +10,8 @@ import matter from "gray-matter";
 
 export default async function MarkdownSection({slug}: {slug: string}) {
 
-    const filePath = path.join(process.cwd(), "content/guides", `${slug}/main.md`);
-    console.log(filePath);
+    const suffix =  (slug=="default")?("default.md"):(`${slug}/main.md`);
+    const filePath = path.join(process.cwd(), "content/guides", suffix);
 
     let raw="";
     try { 
@@ -28,7 +28,7 @@ export default async function MarkdownSection({slug}: {slug: string}) {
     const {data, content} = matter(raw);
 
     return (
-        <article className={`${styles.container} prose mx-auto`}>
+        <article className={`${styles.container} prose`}>
             <h1>{data.title}</h1>
             <ReactMarkdown rehypePlugins={[rehypeRaw]} components={markdownComponents}>
                 {content}

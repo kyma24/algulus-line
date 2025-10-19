@@ -9,7 +9,7 @@ import { topics } from '@/constants/topics';
 
 // todo: if sidebar gets too short, collapse sections into one button
 
-const TopicSidenav = () => {
+export const TopicSidenav = () => {
   const [panelOpen, setPanelOpen] = useState(false);
   const [IDs, setIDs] = useState([-1, -1, -1]);
   const [topicID, setTopicID] = useState(-1);
@@ -89,4 +89,21 @@ const TopicSidenav = () => {
   );
 };
 
-export default TopicSidenav;
+export const JustSidenav = () => {
+  return (
+    <div className={styles.container}>
+
+      <div className={styles.sidebar}>
+          {[0,1,2,3,4,5,6,7].map((i) => (
+          <button 
+              key={i}
+              className={styles.navButton}>
+              <div className={`w-1/1 aspect-square`} style={{ backgroundColor: topics[i].color }}/>
+              <p className="text-sm text-[#bdc2cb] font-[outfit] font-semibold">{topics[i].short}</p>
+          </button>
+          ))}
+      </div>
+
+    </div>
+  );
+}

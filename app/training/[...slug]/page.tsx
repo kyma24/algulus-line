@@ -3,7 +3,7 @@ import React from 'react';
 import styles from "../training.module.css";
 
 import GuideMarkdown from '@/components/training/GuideMarkdown';
-import TopicSidenav from '@/components/training/TopicSidenav';
+import {TopicSidenav} from '@/components/training/TopicSidenav';
 import path from 'path';
 
 // todo: if sidebar gets too short, collapse sections into one button
