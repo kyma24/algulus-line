@@ -8,7 +8,7 @@ import {TopicSidenav} from '@/components/training/TopicSidenav';
 const page = () => {
 
   return (
-    <div className={`${styles.container}`}>
+    <div className={styles.container}>
         <div className="relative">
           <MainNav />
         </div>

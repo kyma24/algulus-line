@@ -1,4 +1,3 @@
-import TitleHero from "../components/TitleHero";
 import LineScroll from "../components/LineScroll";
 import StartSection from "../components/StartSection";
 import MainNav from "@/components/MainNav";

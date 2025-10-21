@@ -1,7 +1,6 @@
 'use client';
 
-import { motion, useAnimationFrame } from "framer-motion";
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useState } from 'react';
 import styles from './LineScroll.module.css';
 import Link from "next/link";
 

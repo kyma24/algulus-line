@@ -1,9 +1,14 @@
-import React, { ReactNode } from 'react';
+import React, {ReactNode} from 'react';
 import { Components } from 'react-markdown';
 import styles from './markdownComponents.module.css';
 
 import {Prism as SyntaxHighlighter} from "react-syntax-highlighter";
 import { vscDarkPlus } from "react-syntax-highlighter/dist/esm/styles/prism";
+
+type CodeProps= {
+  className?: string;
+  children?: React.ReactNode;
+} & React.HTMLAttributes<HTMLElement>;
 
 const markdownComponents : Components = {
   h1: (props) => (<h1 className={styles.h1} {...props} />),
@@ -19,7 +24,7 @@ const markdownComponents : Components = {
   blockquote: (props) => (<blockquote className={styles.blockquote} {...props} />),
   ul: (props) => (<ul className={styles.ul} {...props} />),
   ol: (props) => (<ol className={styles.ol} {...props} />),
-  code({className,children,...props}:any) {
+  code({className,children,...props}:CodeProps) {
     const match = /language-(\w+)/.exec(className||'');
     return match ? (
       <SyntaxHighlighter 
@@ -27,8 +32,7 @@ const markdownComponents : Components = {
         style={vscDarkPlus} 
         PreTag="div" 
         language={match[1]} 
-        showLineNumbers
-        {...props}>
+        showLineNumbers>
 
         {String(children).replace(/\n$/,'')}
 
@@ -37,6 +41,9 @@ const markdownComponents : Components = {
       <code className={styles.code} {...props}>{children}</code>
     )
   },
+  table: (props) => (<table className={styles.table} {...props} />),
+  th: (props) => (<th className={styles.th} {...props} />),
+  td: (props) => (<td className={styles.td} {...props} />),
 };
 
 export default markdownComponents;

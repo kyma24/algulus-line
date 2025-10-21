@@ -1,6 +1,6 @@
 'use client';
 
-import { motion, useAnimationFrame } from "framer-motion";
+import { useAnimationFrame } from "framer-motion";
 import React, { useRef } from 'react';
 import styles from './TrainHero.module.css';
 

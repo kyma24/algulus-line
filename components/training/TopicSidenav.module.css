@@ -42,7 +42,7 @@
 
 @keyframes panelOpenAnimation {
     0% { 
-        transform: translateX(-100%);
+        transform: translateX(-101%);
     }
     100% {
         transform: translateX(0%);
@@ -51,7 +51,7 @@
 
 .panelClosed {
     /*display: none;*/
-    animation: panelClosedAnimation 1s forwards;
+    animation: panelClosedAnimation 0.5s forwards;
 }
 
 @keyframes panelClosedAnimation {
@@ -59,7 +59,7 @@
         transform: translateX(0%);
     }
     100% {
-        transform: translateX(-100%);
+        transform: translateX(-101%);
     }
 }
 

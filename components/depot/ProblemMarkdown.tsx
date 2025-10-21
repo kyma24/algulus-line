@@ -13,8 +13,7 @@ import matter from "gray-matter";
 
 export default async function MarkdownSection({slug}: {slug: string}) {
 
-    const suffix =  (slug=="default")?("default.md"):(`${slug}/main.md`);
-    const filePath = path.join(process.cwd(), "content/guides", suffix);
+    const filePath = path.join(process.cwd(), "content/problems", `${slug}.md`);
 
     let raw="";
     try { 
