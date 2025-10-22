@@ -3,7 +3,7 @@ import React from 'react';
 import styles from "./depot.module.css";
 
 import ProblemList from '@/components/depot/ProblemList';
-import { getAllProblemSlugs } from '@/utils/getSlugs';
+import { getAllProblemPaths } from '@/utils/getSlugs';
 
 const page = () => {
   return (
@@ -13,7 +13,7 @@ const page = () => {
         </div>
 
         <main className={styles.interface}>
-          <ProblemList allProblemSlugs={getAllProblemSlugs()}/>
+          <ProblemList allProblemPaths={getAllProblemPaths()}/>
         </main>
     </div>
   );

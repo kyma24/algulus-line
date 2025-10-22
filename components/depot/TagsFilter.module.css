@@ -1,0 +1,45 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    
+    width: 80%;
+    max-width: 800px;
+    height: fit-content;
+
+    padding: 20px;
+
+    color: #bdc2cb;
+    font-family: Outfit;
+
+    background: #bdc2cb30;
+    border-radius: 10px;
+}
+
+.currentBox {
+    width: 100%;
+    height: fit-content;
+    min-height: 30px;
+
+    padding: 5px;
+
+    background-color: #100d0875;
+    border-radius: 5px;
+}
+
+.selectBox {
+}
+
+.filterButton {
+}
+
+.tag {
+    width: fit-content;
+    height: 30px;
+
+    padding: 3px 8px 3px 8px;
+
+    color: #bdc2cb;
+
+    background-color: #bdc2cb30;
+    border-radius: 2.5px;
+}

@@ -2,40 +2,61 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 
-export function getAllProblemSlugs() {
-    const problemsDir = path.join(process.cwd(), "content/problems");
-    const files = fs.readdirSync(problemsDir);
+const problemsDir = path.join(process.cwd(), "content/problems");
 
-    return files.filter(file => file.endsWith(".md")).map(file => file.replace(/\.md$/,""));
+export function getProblemSlugByPath(filePath: string) {
+    const base = path.relative(problemsDir,filePath);
+    return base.replace(/.md$/,"").replace(/\\/g, '/');
 }
 
-export function getProblemSlugsByTag(filterTags?: string[]) {
-    const allProblemSlugs = getAllProblemSlugs();
+export function getAllProblemPaths() {
+    return getAllPathsHelper(problemsDir);
+}
 
-    if((!filterTags)||(filterTags.length==0)) return allProblemSlugs;
+function getAllPathsHelper(dir: string) {
+    let ret:string[] = [];
+    const files = fs.readdirSync(dir, {withFileTypes: true});
 
-    const N = allProblemSlugs.length;
+    files.forEach((file) => {
+        const filePath = path.join(dir,file.name);
+        if(file.isDirectory()) ret=ret.concat(getAllPathsHelper(filePath));
+        else if(file.name.endsWith(".md")) ret.push(filePath);
+    });
+
+    return ret;
+}
+
+export function getProblemPathsByTag(filterTags?: string[]) {
+    const allProblemPaths = getAllProblemPaths();
+
+    if((!filterTags)||(filterTags.length==0)) return allProblemPaths;
+
+    const N = allProblemPaths.length;
     let included = new Array(N).fill(true);
 
-    allProblemSlugs.forEach((slug, ind) => {
-        const filePath = path.join(process.cwd(), "content/problems", `${slug}.md`);
-        const fileContent = fs.readFileSync(filePath,"utf-8");
-        const {data} = matter(fileContent);
+    allProblemPaths.forEach((filePath, ind) => {
+        const tags=getProblemDataByPath(filePath).tags;
 
         for(const tag of filterTags) {
-            if(!data.tags.includes(tag)) {
+            if(!tags.includes(tag)) {
                 included[ind] = false;
                 break;
             }
         }
     });
 
-    const slugs:string[] = [];
+    const paths:string[] = [];
     for(let i=0; i<N; i++) {
         if(included[i]) {
-            slugs.push(allProblemSlugs[i]);
+            paths.push(allProblemPaths[i]);
         }
     }
 
-    return slugs;
+    return paths;
+}
+
+export function getProblemDataByPath(filePath: string) {
+    const fileContent = fs.readFileSync(filePath,"utf-8");
+    const {data} = matter(fileContent);
+    return data;
 }
