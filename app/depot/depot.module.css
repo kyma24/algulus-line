@@ -5,7 +5,25 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
+    align-items: center;
 }
 
-.interface {
+.article {
+    position: relative;
+
+    width: 80%;
+    max-width: 1000px;
+    height: 100%;
+
+    background-color: #bdc2cb10;
+    border-radius: 20px 20px 0 0;
+
+    overflow-y: scroll;
+}
+
+@media (max-width: 800px) {
+    .article {
+        width: 100%;
+        border-radius: 0;
+    }
 }

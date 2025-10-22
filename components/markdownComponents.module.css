@@ -59,9 +59,22 @@
 
 .ul {
     margin-left: 16px;
+    font-family: Outfit;
+    font-size: 16px;
+    font-weight: 400;
+    
+    line-height: 1.5;
+    margin-bottom: 5px;
 }
 
 .ol {
+    margin-left: 16px;
+    font-family: Outfit;
+    font-size: 16px;
+    font-weight: 400;
+    
+    line-height: 1.5;
+    margin-bottom: 5px;
 }
 
 .code {

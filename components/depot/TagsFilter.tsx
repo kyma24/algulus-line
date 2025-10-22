@@ -15,7 +15,7 @@ const TagsFilter = () => {
       </div>
       <div className={styles.currentBox}>
         {currentTags.map((tag, i) => (
-          <TagItem key={i} name={tag} />
+          <TempTagItem key={i} name={tag} />
         ))}
       </div>
       <div className={styles.selectBox}>
@@ -28,9 +28,9 @@ const TagsFilter = () => {
   );
 };
 
-const TagItem = ({name}: {name: string}) => {
+const TempTagItem = ({name}: {name: string}) => {
   return (
-    <div className={styles.tag}>
+    <div className={styles.temptag}>
       {name}
     </div>
   );

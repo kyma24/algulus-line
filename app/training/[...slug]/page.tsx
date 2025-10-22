@@ -16,9 +16,7 @@ export default async function Page(
 
   return (
     <div className={`${styles.container}`}>
-        <div className="relative">
-          <MainNav />
-        </div>
+        <MainNav />
 
         <main className={styles.interface}>
 

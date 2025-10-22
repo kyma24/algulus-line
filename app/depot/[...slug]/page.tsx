@@ -2,15 +2,23 @@ import React from 'react';
 import styles from "../depot.module.css";
 
 import MainNav from '@/components/MainNav';
+import ProblemMarkdown from '@/components/depot/ProblemMarkdown';
 
-const page = () => {
+import path from 'path';
+
+export default async function Page(
+    {params}: {params: Promise<{slug: string[]}>}
+) {
+  const { slug } = await params;
+  const slugJoin = path.join(...slug);
+
   return (
     <div className={styles.container}>
       <MainNav />
-      
-      <div className="w-1/1 h-20" />
-    </div>
-  )
-}
 
-export default page
+      <main className={styles.article}>
+        <ProblemMarkdown slug={slugJoin} />
+      </main>
+    </div>
+  );
+}

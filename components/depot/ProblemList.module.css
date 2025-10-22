@@ -70,11 +70,15 @@
     
     font: 600 16px Courier;
     color: #bdc2cb70;
+
+    white-space: nowrap;
+    overflow: hidden;
     text-overflow: ellipsis;
 }
 
 .titleCol {
     width: 30%;
+    /*min-width: 200px;*/
     text-align: left;
 
     white-space: nowrap;
@@ -83,12 +87,15 @@
 }
 
 .titles {
-    color: #99a9c6
+    color: #b2c0da;
 }
 
 .sourceCol {
     width: 75px;
     text-align: left;
+
+    white-space: nowrap;
+    overflow: hidden;
     text-overflow: ellipsis;
 }
 
@@ -101,5 +108,8 @@
 .tagsCol {
     flex: 1;
     text-align: left;
-    white-space: wrap;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }

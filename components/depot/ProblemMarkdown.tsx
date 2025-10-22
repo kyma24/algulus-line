@@ -1,4 +1,4 @@
-import styles from "./GuideMarkdown.module.css";
+import styles from "./ProblemMarkdown.module.css";
 import markdownComponents from "../markdownComponents";
 
 import ReactMarkdown from "react-markdown";
@@ -10,9 +10,9 @@ import rehypeKatex from "rehype-katex";
 import path from "path";
 import fs from "fs/promises";
 import matter from "gray-matter";
+import {DiffTag, Tag} from "./Tag";
 
-export default async function MarkdownSection({slug}: {slug: string}) {
-
+export default async function ProblemMarkdown({slug}: {slug: string}) {
     const filePath = path.join(process.cwd(), "content/problems", `${slug}.md`);
 
     let raw="";
@@ -31,7 +31,23 @@ export default async function MarkdownSection({slug}: {slug: string}) {
 
     return (
         <article className={`${styles.container} prose`}>
-            <h1>{data.title}</h1>
+            <div className={styles.topInfo}>
+                <div>
+                    <p className={styles.source}>{data.source}</p>
+                    <div className={styles.titleBox}>
+                        <h1>{data.title}</h1>
+                        <a 
+                            href={data.link} target="_blank" rel="noopener noreferrer" 
+                            className={styles.linkBox}>
+                            <div className={styles.linkArrow} />
+                        </a>
+                    </div>
+                </div>
+                <div className={styles.metadata}>
+                    <DiffTag diff={data.difficulty} />
+                    <TagsDisplay tags={data.tags} />
+                </div>
+            </div>
             <ReactMarkdown 
                 remarkPlugins={[remarkGfm,remarkMath]}
                 rehypePlugins={[rehypeRaw,rehypeKatex]} 
@@ -42,3 +58,13 @@ export default async function MarkdownSection({slug}: {slug: string}) {
         </article>
     );
 }
+
+const TagsDisplay = ({tags}: {tags: string[]}) => {
+    return (
+        <span className={styles.tagContainer}>
+            {tags.map((name,i) => (
+                <Tag key={i} name={name} />
+            ))}
+        </span>
+    );
+};

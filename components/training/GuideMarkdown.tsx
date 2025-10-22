@@ -11,8 +11,7 @@ import path from "path";
 import fs from "fs/promises";
 import matter from "gray-matter";
 
-export default async function MarkdownSection({slug}: {slug: string}) {
-
+export default async function GuideMarkdown({slug}: {slug: string}) {
     const suffix =  (slug=="default")?("default.md"):(`${slug}/main.md`);
     const filePath = path.join(process.cwd(), "content/guides", suffix);
 

@@ -1,10 +1,12 @@
 import React from 'react';
+import Link from 'next/link';
 import styles from "./ProblemList.module.css";
 
 import { getProblemDataByPath, getProblemSlugByPath } from '@/utils/getSlugs';
 
 import TagsFilter from './TagsFilter';
-import Link from 'next/link';
+import { DiffCircle } from './DiffCircle';
+import { TextTag } from './Tag';
 
 // top: filters (tag, source, concept, ...)
 
@@ -54,11 +56,7 @@ const ProblemItem = ({ind, path}: {ind: number, path: string}) => {
       </td>
       <td className={styles.tagsCol}>
         {data.tags.map((tag:string, i:number) => (
-          (i==0) ? (
-            <p key={i} className="inline">{tag}</p>
-          ) : (
-            <p key={i} className="inline">{`, ${tag}`}</p>
-          )
+          <TextTag key={i} name={tag} nocomma={(i==0)} />
         ))}
       </td>
     </tr>
@@ -82,38 +80,6 @@ const ListHeader = () => {
         Tags
       </th>
     </tr>
-  );
-};
-
-const DiffCircle = ({diff}: {diff: number}) => {
-  let color = "";
-
-  switch(diff) {
-    case(10): 
-      color="bg-emerald-600";
-      break;
-    case(15):
-      color="bg-emerald-800";
-      break;
-    case(20): 
-      color="bg-amber-500";
-      break;
-    case(25):
-      color="bg-amber-800";
-      break;
-    case(30): 
-      color="bg-rose-500";
-      break;
-    case(35):
-      color="bg-rose-800";
-      break;
-    default: 
-      color="bg-neutral-600";
-      break;
-  }
-
-  return (
-    <div className={`w-1/1 aspect-square rounded-full ${color}`} />
   );
 };
 
