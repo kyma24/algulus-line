@@ -58,10 +58,7 @@ export const tags = {
 };
 
 export const diffTags = {
-    10: { name: "Light", bg: "bg-emerald-300", color: "text-emerald-300", border: "border-emerald-300" },
-    15: { name: "Easy", bg: "bg-emerald-600", color: "text-emerald-400", border: "border-emerald-400" },
-    20: { name: "Medium", bg: "bg-amber-600", color: "text-amber-600", border: "border-amber-600" },
-    25: { name: "Tougher", bg: "bg-amber-600", color: "text-amber-600", border: "border-amber-600" },
-    30: { name: "Hard", bg: "bg-rose-600", color: "text-rose-600", border: "border-rose-600" },
-    35: { name: "Insane", bg: "bg-rose-600", color: "text-rose-600", border: "border-rose-600" },
+    10: { name: "Easy", bg: "bg-emerald-400", color: "text-emerald-400", border: "border-emerald-400" },
+    20: { name: "Medium", bg: "bg-amber-400", color: "text-amber-400", border: "border-amber-400" },
+    30: { name: "Hard", bg: "bg-rose-400", color: "text-rose-400", border: "border-rose-400" },
 };

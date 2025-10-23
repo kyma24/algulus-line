@@ -6,13 +6,7 @@ import { getProblemDataByPath, getProblemSlugByPath } from '@/utils/getSlugs';
 
 import TagsFilter from './TagsFilter';
 import { DiffCircle } from './DiffCircle';
-import { TextTag } from './Tag';
-
-// top: filters (tag, source, concept, ...)
-
-// input: set of problems
-// display: like lines of code: 
-// problem index, name/title, source, concept, tags, difficulty
+import { SmallTag } from './Tag';
 
 const ProblemList = ({allProblemPaths}: {allProblemPaths: string[]}) => {
   return (
@@ -54,9 +48,9 @@ const ProblemItem = ({ind, path}: {ind: number, path: string}) => {
       <td className={styles.diffCol}>
         <DiffCircle diff={data.difficulty} />
       </td>
-      <td className={styles.tagsCol}>
+      <td className={`${styles.tagsCol} ${styles.centerTags}`}>
         {data.tags.map((tag:string, i:number) => (
-          <TextTag key={i} name={tag} nocomma={(i==0)} />
+          <SmallTag key={i} name={tag} />
         ))}
       </td>
     </tr>

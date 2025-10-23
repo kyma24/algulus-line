@@ -22,25 +22,12 @@ export const Tag = ({name}: {name: string}) => {
   );
 };
 
-export const TextTag = ({name, nocomma}: {name: string, nocomma: boolean}) => {
-  const mapIndex = name as keyof typeof tags;
-
-  const txt = (name in tags)? tags[mapIndex].color+"ba" : "#bdc2cbba";
-
-  if(nocomma) {
-    return (
-      <span style={{color: txt}}>
-        {name}
-      </span>
-    );
-  } else {
-    return (
-      <span>
-        <span style={{color: "#bdc2cb"}}>, </span>
-        <span style={{color: txt}}>{name}</span>
-      </span>
-    );
-  }
+export const SmallTag = ({name}: {name: string}) => {
+  return (
+    <span className={styles.smallTag}>
+      {name}
+    </span>
+  );
 };
 
 export const DiffTag = ({diff}: {diff: number}) => {
