@@ -4,7 +4,7 @@ source: "CSES"
 link: "https://cses.fi/problemset/task/1653"
 difficulty: 10
 concept: "dp"
-tags: ["bitmask", "dp"]
+tags: ["dp", "bitmask"]
 ---
 
 <br>

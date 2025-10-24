@@ -18,6 +18,7 @@ export const tags = {
     "connected components": { color: graph },
     "combinatorics": { color: math },
     "constructive": { color: general },
+    "coordinate compression": { color: general},
     "cycles": { color: graph },
     "dijkstra's": { color: graph },
     "divide and conquer": { color: general },
