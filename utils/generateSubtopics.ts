@@ -50,20 +50,20 @@ function generateTopicsMap(dir: string, slug: string) {
             subslug: "default",
             order: 0,
         };
+        
+        subtopicInfo.subslug = getSlugByPath(subtopicDir);
 
         let dataPath = "";
         const check=fs.statSync(subtopicDir);
         // expandable (has subsections)
         if(check.isDirectory()) {
-            generateSubtopicsMap(subtopicDir,subtopic.name);
+            generateSubtopicsMap(subtopicDir,subtopicInfo.subslug);
             dataPath = path.join(subtopicDir,"main.md");
         } 
         // single file
         else {
             dataPath = subtopicDir;
         }
-        
-        subtopicInfo.subslug = getSlugByPath(subtopicDir);
         
         const data = getDataByPath(dataPath);
         subtopicInfo.name = data.title;

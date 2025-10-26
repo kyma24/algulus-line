@@ -240,14 +240,14 @@ import {TopicMap} from "@/utils/generateSubtopics";
 };
 
 export const subtopicChildren:TopicMap = {
-    "queue": [
+    "data-structures/queue": [
         {
             "name": "Priority Queue",
             "subslug": "data-structures/queue/priority-queue",
             "order": 0
         }
     ],
-    "set": [
+    "data-structures/set": [
         {
             "name": "Multiset",
             "subslug": "data-structures/set/multiset",
@@ -259,14 +259,14 @@ export const subtopicChildren:TopicMap = {
             "order": 1
         }
     ],
-    "searching": [
+    "general-algorithms/searching": [
         {
             "name": "Binary Search",
             "subslug": "general-algorithms/searching/binary-search",
             "order": 0
         }
     ],
-    "sorting": [
+    "general-algorithms/sorting": [
         {
             "name": "Bubble Sort",
             "subslug": "general-algorithms/sorting/bubble-sort",
@@ -288,7 +288,7 @@ export const subtopicChildren:TopicMap = {
             "order": 3
         }
     ],
-    "connected-components": [
+    "graph-theory/connected-components": [
         {
             "name": "DSU",
             "subslug": "graph-theory/connected-components/dsu",
@@ -300,14 +300,14 @@ export const subtopicChildren:TopicMap = {
             "order": 1
         }
     ],
-    "flow": [
+    "graph-theory/flow": [
         {
             "name": "Ford Fulkerson",
             "subslug": "graph-theory/flow/ford-fulkerson",
             "order": 0
         }
     ],
-    "forms": [
+    "graph-theory/forms": [
         {
             "name": "Undirected",
             "subslug": "graph-theory/forms/undirected",
@@ -319,7 +319,7 @@ export const subtopicChildren:TopicMap = {
             "order": 1
         }
     ],
-    "min-max-spanning-tree": [
+    "graph-theory/min-max-spanning-tree": [
         {
             "name": "Kruskal's",
             "subslug": "graph-theory/min-max-spanning-tree/kruskals",
@@ -331,7 +331,7 @@ export const subtopicChildren:TopicMap = {
             "order": 1
         }
     ],
-    "shortest-path": [
+    "graph-theory/shortest-path": [
         {
             "name": "Dijkstra's",
             "subslug": "graph-theory/shortest-path/dijkstras",
@@ -348,24 +348,19 @@ export const subtopicChildren:TopicMap = {
             "order": 2
         }
     ],
-    "traversal": [
+    "graph-theory/traversal": [
         {
-            "name": "Preorder",
-            "subslug": "trees/traversal/preorder",
+            "name": "DFS",
+            "subslug": "graph-theory/traversal/dfs",
             "order": 0
         },
         {
-            "name": "Inorder",
-            "subslug": "trees/traversal/inorder",
+            "name": "BFS",
+            "subslug": "graph-theory/traversal/bfs",
             "order": 1
-        },
-        {
-            "name": "Postorder",
-            "subslug": "trees/traversal/postorder",
-            "order": 2
         }
     ],
-    "structures": [
+    "querying/structures": [
         {
             "name": "Sparse Table",
             "subslug": "querying/structures/sparse-table",
@@ -382,11 +377,28 @@ export const subtopicChildren:TopicMap = {
             "order": 2
         }
     ],
-    "decompositions": [
+    "trees/decompositions": [
         {
             "name": "Heavy-Light Decomposition",
             "subslug": "trees/decompositions/heavy-light",
             "order": 0
+        }
+    ],
+    "trees/traversal": [
+        {
+            "name": "Preorder",
+            "subslug": "trees/traversal/preorder",
+            "order": 0
+        },
+        {
+            "name": "Inorder",
+            "subslug": "trees/traversal/inorder",
+            "order": 1
+        },
+        {
+            "name": "Postorder",
+            "subslug": "trees/traversal/postorder",
+            "order": 2
         }
     ]
 };

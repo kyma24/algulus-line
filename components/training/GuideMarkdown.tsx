@@ -13,11 +13,17 @@ import matter from "gray-matter";
 
 import { subtopicChildren } from "@/constants/subtopics";
 
+function normalSlug(slug:string) {
+    return slug.replace(/\\/g, '/');
+}
+
 export default async function GuideMarkdown({slug}: {slug: string}) {
+    const normSlug = normalSlug(slug);
+    
     let base = "default.md";
-    if(slug=="default") base="default.md";
-    else if(slug in subtopicChildren) base=path.join(slug, "main.md");
-    else base=`${slug}.md`;
+    if(normSlug=="default") base="default.md";
+    else if(normSlug in subtopicChildren) base=`${normSlug}/main.md`;
+    else base=`${normSlug}.md`;
     
     const filePath = path.join(process.cwd(), "content/guides", base);
 
