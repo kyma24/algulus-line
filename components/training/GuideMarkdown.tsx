@@ -11,9 +11,15 @@ import path from "path";
 import fs from "fs/promises";
 import matter from "gray-matter";
 
+import { subtopicChildren } from "@/constants/subtopics";
+
 export default async function GuideMarkdown({slug}: {slug: string}) {
-    const suffix =  (slug=="default")?("default.md"):(`${slug}/main.md`);
-    const filePath = path.join(process.cwd(), "content/guides", suffix);
+    let base = "default.md";
+    if(slug=="default") base="default.md";
+    else if(slug in subtopicChildren) base=path.join(slug, "main.md");
+    else base=`${slug}.md`;
+    
+    const filePath = path.join(process.cwd(), "content/guides", base);
 
     let raw="";
     try { 

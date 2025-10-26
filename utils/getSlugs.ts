@@ -35,7 +35,7 @@ export function getProblemPathsByTag(filterTags?: string[]) {
     let included = new Array(N).fill(true);
 
     allProblemPaths.forEach((filePath, ind) => {
-        const tags=getProblemDataByPath(filePath).tags;
+        const tags=getDataByPath(filePath).tags;
 
         for(const tag of filterTags) {
             if(!tags.includes(tag)) {
@@ -55,7 +55,7 @@ export function getProblemPathsByTag(filterTags?: string[]) {
     return paths;
 }
 
-export function getProblemDataByPath(filePath: string) {
+export function getDataByPath(filePath: string) {
     const fileContent = fs.readFileSync(filePath,"utf-8");
     const {data} = matter(fileContent);
     return data;

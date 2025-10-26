@@ -6,34 +6,18 @@ import styles from "./TopicSidenav.module.css";
 import HierarchyItem from './HierarchyItem';
 
 import { topics } from '@/constants/topics';
+import { topicChildren } from '@/constants/subtopics';
 
 // todo: if sidebar gets too short, collapse sections into one button
 
 export const TopicSidenav = () => {
   const [panelOpen, setPanelOpen] = useState(false);
-  const [IDs, setIDs] = useState([-1, -1, -1]);
   const [topicID, setTopicID] = useState(-1);
 
   const handleSideOpen = (id: number) => {
     if(!panelOpen) setPanelOpen(true);
     setTopicID(id);
   };
-
-  const handleSubtopic = (id: number) => {
-    setIDs([topicID, id, -1]);
-  };
-
-  const handleSubsub = (parent: number, id: number) => {
-    setIDs([topicID, parent, id]);
-  };
-
-  const getSubtopicSlug = (i: number) => {
-    return topics[topicID].slug + '/' + topics[topicID].subtopicSlugs[i];
-  };
-
-  const getSubsubSlug = (i: number, j: number) => {
-    return getSubtopicSlug(i) + '/' + topics[topicID].subsubSlugs[i][j];
-  }
 
   return (
     <div className={styles.container}>
@@ -63,22 +47,10 @@ export const TopicSidenav = () => {
           
           <div className={styles.hierarchy}>
             {(topicID>=0)?
-            topics[topicID].subtopics.map((subtopic, i) => (
+            topicChildren[topics[topicID].slug].map((subtopic, i) => (
               <HierarchyItem key={i} 
-                name={subtopic} 
-                slug={getSubtopicSlug(i)}
-                isSelected={(IDs[0]==topicID)&&(IDs[1]==i)&&(IDs[2]<0)} 
-                onClick={() => handleSubtopic(i)}>
-
-                {topics[topicID].subsub[i].map((concept, j) => (
-                  <HierarchyItem key={j} 
-                    name={concept} 
-                    slug={getSubsubSlug(i,j)}
-                    isSelected={(IDs[0]==topicID)&&(IDs[1]==i)&&(IDs[2]==j)} 
-                    onClick={() => handleSubsub(i,j)} />
-                ))}
-
-              </HierarchyItem>
+                name={subtopic.name} 
+                slug={subtopic.subslug} />
             ))
             :""}
           </div>

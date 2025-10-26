@@ -1,5 +1,0 @@
----
-title: "Diameter"
----
-
-## Hi!

@@ -1,5 +1,0 @@
----
-title: "Modular Arithmetic"
----
-
-## Hi!

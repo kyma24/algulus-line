@@ -6,7 +6,7 @@
     flex-direction: column;
     align-items: center;
 
-    background: linear-gradient(to bottom, var(--color-background), #09142A);
+    background: linear-gradient(to bottom, var(--color-background) 0%, #09142A 75%);
 }
 
 .article {

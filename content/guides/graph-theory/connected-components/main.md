@@ -1,5 +1,4 @@
 ---
 title: "Connected Components"
+order: 2
 ---
-
-## Hi!

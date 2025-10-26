@@ -1,5 +1,0 @@
----
-title: "Cycles"
----
-
-## Hi!

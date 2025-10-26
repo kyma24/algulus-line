@@ -1,5 +1,0 @@
----
-title: "Dijkstra's"
----
-
-## Hi!

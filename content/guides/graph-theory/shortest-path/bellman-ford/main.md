@@ -1,5 +1,0 @@
----
-title: "Bellman-Ford"
----
-
-## Hi!

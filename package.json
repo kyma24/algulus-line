@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "subtopicsetup": "tsx utils/generateSubtopics.ts"
   },
   "dependencies": {
     "@mdx-js/react": "^3.1.1",
@@ -38,6 +39,7 @@
     "eslint": "^9",
     "eslint-config-next": "15.5.3",
     "tailwindcss": "^4",
-    "typescript": "^5"
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3"
   }
 }

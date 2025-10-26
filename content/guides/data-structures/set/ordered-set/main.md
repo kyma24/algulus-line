@@ -1,5 +1,0 @@
----
-title: "Ordered Set"
----
-
-## Hi!

@@ -1,8 +1,6 @@
 ---
 title: "Training Page"
-tags: []
 ---
-
 <br>
 
 ## Welcome!

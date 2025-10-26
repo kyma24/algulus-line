@@ -1,5 +1,4 @@
 ---
 title: "Traversal"
+order: 0
 ---
-
-## Hi!

@@ -1,5 +1,0 @@
----
-title: "Heavy-Light"
----
-
-## Hi!

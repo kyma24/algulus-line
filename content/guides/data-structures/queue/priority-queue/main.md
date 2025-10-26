@@ -1,5 +1,0 @@
----
-title: "Priority Queue"
----
-
-## Hi!

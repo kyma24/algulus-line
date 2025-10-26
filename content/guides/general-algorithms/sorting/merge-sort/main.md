@@ -1,5 +1,0 @@
----
-title: "Merge Sort"
----
-
-## Hi!

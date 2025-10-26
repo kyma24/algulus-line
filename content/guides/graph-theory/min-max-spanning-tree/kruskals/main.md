@@ -1,5 +1,0 @@
----
-title: "Kruskal's"
----
-
-## Hi!

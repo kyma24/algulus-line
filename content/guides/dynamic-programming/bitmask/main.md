@@ -1,5 +1,0 @@
----
-title: "Bitmask"
----
-
-## Hi!

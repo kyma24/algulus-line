@@ -1,5 +1,0 @@
----
-title: "Ford Fulkerson"
----
-
-## Hi!

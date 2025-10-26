@@ -1,5 +1,0 @@
----
-title: "Insertion Sort"
----
-
-## Hi!

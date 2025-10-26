@@ -1,5 +1,0 @@
----
-title: "Knapsack"
----
-
-## Hi!

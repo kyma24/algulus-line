@@ -1,5 +1,0 @@
----
-title: "Quick Sort"
----
-
-## Hi!

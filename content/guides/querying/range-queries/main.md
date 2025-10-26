@@ -1,5 +1,0 @@
----
-title: "Range Queries"
----
-
-## Hi!

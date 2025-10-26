@@ -1,5 +1,0 @@
----
-title: "Kosaraju's"
----
-
-## Hi!

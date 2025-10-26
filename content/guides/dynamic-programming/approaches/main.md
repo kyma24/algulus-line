@@ -1,5 +1,0 @@
----
-title: "Approaches"
----
-
-## Hi!

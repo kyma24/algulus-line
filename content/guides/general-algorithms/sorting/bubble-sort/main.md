@@ -1,5 +1,0 @@
----
-title: "Bubble Sort"
----
-
-## Hi!

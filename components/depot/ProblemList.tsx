@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import styles from "./ProblemList.module.css";
 
-import { getProblemDataByPath, getProblemSlugByPath } from '@/utils/getSlugs';
+import { getDataByPath, getProblemSlugByPath } from '@/utils/getSlugs';
 
 import TagsFilter from './TagsFilter';
 import { DiffCircle } from './DiffCircle';
@@ -29,7 +29,7 @@ const ProblemList = ({allProblemPaths}: {allProblemPaths: string[]}) => {
 
 const ProblemItem = ({ind, path}: {ind: number, path: string}) => {
 
-  const data = getProblemDataByPath(path);
+  const data = getDataByPath(path);
   const slug = getProblemSlugByPath(path);
 
   return (

@@ -1,5 +1,0 @@
----
-title: "Bit Manipulation"
----
-
-## Hi!

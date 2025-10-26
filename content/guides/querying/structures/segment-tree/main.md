@@ -1,5 +1,0 @@
----
-title: "Segment Tree"
----
-
-## Hi!
