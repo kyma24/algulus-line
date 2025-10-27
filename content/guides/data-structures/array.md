@@ -47,7 +47,7 @@ int A[5][5];
 Length:
 ```cpp
 // total array bytes / single element bytes
-int len=sizeof(A)/sizeof(A[0]);
+int N=sizeof(A)/sizeof(A[0]);
 ```
 
 <br>
@@ -85,6 +85,13 @@ vector<int> V;
 
 // multi-dimensional
 vector<vector<int>> V(5,vector<int>(5));
+```
+
+<br>
+
+Length:
+```cpp
+int N=V.size();
 ```
 
 <br>

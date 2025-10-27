@@ -11,9 +11,24 @@ import {TopicMap} from "@/utils/generateSubtopics";
             "name": "Logic",
             "subslug": "basic-concepts/logic",
             "order": 1
+        },
+        {
+            "name": "Operators",
+            "subslug": "basic-concepts/operators",
+            "order": 2
+        },
+        {
+            "name": "C++ Syntax",
+            "subslug": "basic-concepts/cpp-syntax",
+            "order": 3
         }
     ],
     "data-structures": [
+        {
+            "name": "Iterators",
+            "subslug": "data-structures/iterators",
+            "order": -1
+        },
         {
             "name": "Array",
             "subslug": "data-structures/array",
