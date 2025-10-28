@@ -3,10 +3,10 @@
 import React, { useState } from 'react';
 import styles from "./TagsFilter.module.css";
 
-import { tags } from "../../constants/tags";
+//import { tags } from "../../constants/tags";
 
 const TagsFilter = () => {
-  let currentTags:string[] = ["under construction!"];
+  const currentTags:string[] = ["under construction!"];
 
   return (
     <div className={styles.container}>

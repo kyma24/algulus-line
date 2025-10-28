@@ -1,0 +1,13 @@
+.container {
+    width: 100vw;
+    height: 30px;
+
+    align-content: center;
+
+    text-align: center;
+    font-family: Outfit;
+    font-weight: 500;
+    
+    color: #bdc2cb;
+    background-color: #bdc2cb10;
+}

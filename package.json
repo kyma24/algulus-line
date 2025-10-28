@@ -6,8 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "deploy": "npm run build && gh-pages -d out",
     "lint": "eslint",
-    "subtopicsetup": "tsx utils/generateSubtopics.ts"
+    "subtopicsetup": "tsx utils/generateSubtopics.ts",
+    "staticsetup": "tsx utils/getStaticPages.ts"
   },
   "dependencies": {
     "@mdx-js/react": "^3.1.1",
@@ -38,6 +40,7 @@
     "daisyui": "^5.1.14",
     "eslint": "^9",
     "eslint-config-next": "15.5.3",
+    "gh-pages": "^6.3.0",
     "tailwindcss": "^4",
     "tsx": "^4.20.6",
     "typescript": "^5.9.3"

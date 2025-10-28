@@ -1,6 +1,7 @@
 import LineScroll from "../components/LineScroll";
 import StartSection from "../components/StartSection";
 import MainNav from "@/components/MainNav";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -9,13 +10,14 @@ export default function Home() {
         <MainNav />
         
         <div className="w-1/1 h-20" />
-        <div className="h-[75vh]" />
+        <div className="h-[30vh]" />
 
         <StartSection />
         
         <div className="w-1/1 h-20" />
-        <LineScroll></LineScroll>
+        <LineScroll />
 
+        <Footer />
       </main>
       <footer>
       </footer>

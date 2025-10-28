@@ -16,11 +16,11 @@ const outfit = localFont({
   weight: "100 900",
 });
 
-const hind = localFont({
+/*const hind = localFont({
   src: '../public/fonts/Hind-Variable.ttf',
   variable: '--font-hind',
   weight: "100 900",
-});
+});*/
 
 const author = localFont({
   src: '../public/fonts/Author-Variable.ttf',

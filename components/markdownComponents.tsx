@@ -1,4 +1,4 @@
-import React, {ReactNode} from 'react';
+import React from 'react';
 import { Components } from 'react-markdown';
 import styles from './markdownComponents.module.css';
 

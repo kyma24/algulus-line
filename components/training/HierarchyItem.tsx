@@ -1,6 +1,6 @@
 'use client';
 
-import React, { ReactNode, useState } from 'react';
+import React, { useState } from 'react';
 import styles from "./HierarchyItem.module.css";
 import Link from 'next/link';
 

@@ -6,6 +6,11 @@ import ProblemMarkdown from '@/components/depot/ProblemMarkdown';
 
 import path from 'path';
 
+import { problemStaticPages } from '@/constants/staticProbs';
+export async function generateStaticParams() {
+  return problemStaticPages.map(prob => ({slug: prob}));
+}
+
 export default async function Page(
     {params}: {params: Promise<{slug: string[]}>}
 ) {

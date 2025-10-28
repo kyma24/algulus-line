@@ -2,11 +2,11 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 
-// CONSTRUCTS subtopics.js
+// CONSTRUCTS subtopics.ts
 // (npm run subtopicsetup)
 // run when guides pages are updated -- automatically adjusts hierarchy
 
-interface TopicInfo {
+export interface TopicInfo {
     name: string;
     subslug: string;
     order: number;
