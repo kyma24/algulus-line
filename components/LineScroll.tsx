@@ -107,7 +107,7 @@ const LineScroll = () => {
                                     (j<topics[i].subtopics.length-1) ? (topic + " • ") : (topic)
                               ))}
                         </div>
-                        <Link className={`${styles.button} font-[chillax] font-bold rounded-3xl bg-[#A4ABB7]`} href={"/"+topics[i].slug}>TRAVEL</Link>
+                        <Link className={`${styles.button} font-[chillax] font-bold rounded-3xl bg-[#A4ABB7]`} href={topics[i].href/*"/"+topics[i].slug*/}>TRAVEL</Link>
                   </div>
             ))}
       </div>
