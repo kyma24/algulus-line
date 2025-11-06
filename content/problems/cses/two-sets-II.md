@@ -14,6 +14,9 @@ tags: ["dp", "combinatorics", "math"]
 Count the number of ways the integers from $1\to N$ $(1\leq N\leq 500)$ can be divided into two sets with equal sum, mod $10^9+7$.
 
 <br>
+
+---
+
 <br>
 
 ## Key Observations
@@ -80,6 +83,9 @@ $dp[i][a]$ represents the number of ways to make a set of sum $a$ given only the
     - The answer in that case will simply be $dp[N][aim]$, without the $/2$.
 
 <br>
+
+---
+
 <br>
 
 ## Code
@@ -136,3 +142,5 @@ int main() {
     }
 }
 ```
+
+---TAKEAWAYS---

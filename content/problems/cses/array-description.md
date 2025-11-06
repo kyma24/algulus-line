@@ -18,6 +18,9 @@ Given that the value $0$ can be replaced with any number, and that the absolute 
 (In other words, how many ways are there to choose numbers to replace the $0$s such that the difference between any two adjacent values is at most $1$?)
 
 <br>
+
+---
+
 <br>
 
 ## Key Observations
@@ -81,6 +84,9 @@ Given that the value $0$ can be replaced with any number, and that the absolute 
     - If space optimization were needed, we could just store them in 1 or 2 arrays to track the values, and replace them as we iterate.
 
 <br>
+
+---
+
 <br>
 
 ## Code
@@ -173,3 +179,5 @@ int main() {
     cout<<res<<endl;
 }
 ```
+
+---TAKEAWAYS---

@@ -18,6 +18,9 @@ Two players alternate moves. One move is removing either the first or last numbe
 Determine the maximum possible score for the first player when both players play optimally.
 
 <br>
+
+---
+
 <br>
 
 ## Key Observations
@@ -90,6 +93,9 @@ $dp[l][r]$ represents the maximum value gained of the starting player if the cur
     - Noticing this alternating pattern should hopefully guide your thought process in the right direction.
 
 <br>
+
+---
+
 <br>
 
 ## Code
@@ -140,3 +146,5 @@ int main() {
     cout<<(sum+dp[0][n-1])/2<<endl;
 }
 ```
+
+---TAKEAWAYS---

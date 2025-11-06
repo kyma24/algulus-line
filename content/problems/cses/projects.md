@@ -16,6 +16,9 @@ You have $N$ $(1\leq N\leq 2\cdot 10^5)$ projects, each with a start day $A_i$, 
 Determine the maximum amount of money you can earn if you can only work on one project per day.
 
 <br>
+
+---
+
 <br>
 
 ## Key Observations
@@ -63,6 +66,9 @@ $dp[i]$ represents the maximum amount of money earned considering up to the $i$t
 **Answer:** $dp[$# of coordinates$-1]$ contains the maximum amount of money earned factoring in all inputted coordinates.
 
 <br>
+
+---
+
 <br>
 
 ## Code
@@ -107,3 +113,5 @@ int main() {
     cout<<dp[coords-1]<<endl;
 }
 ```
+
+---TAKEAWAYS---

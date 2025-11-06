@@ -37,7 +37,7 @@
 }
 
 .caret {
-    height: auto;
+    height: 24px;
     aspect-ratio: 1/1;
     background-color: #bdc2cb30;
     z-index: 100;

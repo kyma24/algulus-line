@@ -16,6 +16,9 @@ You have $N$ $(1\leq N\leq 100)$ coins with certain values $C_i$â€‹ $(1\leq C_iâ
 If each coin can only be used once, find and output all the money sums you can create using these coins.
 
 <br>
+
+---
+
 <br>
 
 ## Key Observations
@@ -65,6 +68,9 @@ $dp[i][x]$ represents if it is possible to create a sum $x$ with the coins $C_{0
 **Answer:** to print out all possible sums, just go back through $dp[N][x]$ and output the $x$ values that are marked true.
 
 <br>
+
+---
+
 <br>
 
 ## Code
@@ -134,3 +140,5 @@ int main() {
     }
 }
 ```
+
+---TAKEAWAYS---

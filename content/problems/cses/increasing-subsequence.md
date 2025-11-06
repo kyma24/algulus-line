@@ -14,6 +14,9 @@ tags: ["dp", "lis", "subsequence"]
 Given array $A$ $(1\leq A_i\leq 10^9)$ of length $N$ $(1\leq N\leq 2\cdot 10^5)$, determine the longest increasing subsequence of the array.
 
 <br>
+
+---
+
 <br>
 
 ## Key Observations
@@ -84,6 +87,9 @@ Given array $A$ $(1\leq A_i\leq 10^9)$ of length $N$ $(1\leq N\leq 2\cdot 10^5)$
         - Also, it's ALWAYS better to update the end of a longer subsequence than a shorter one. Think of it this way: at a given index, would you rather be able to make a longer sequence with everything before, or a shorter one?
 
 <br>
+
+---
+
 <br>
 
 ## Code
@@ -172,3 +178,5 @@ int main() {
     cout<<dp.size()<<endl;
 }
 ```
+
+---TAKEAWAYS---

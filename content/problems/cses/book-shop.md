@@ -16,6 +16,9 @@ You have $N$ different books $(1\leq N\leq 1000)$, each with its own price $H_i$
 Given that the total price of books is at most $X$ $(1\leq X\leq 105)$, and that each book can be bought at most once, determine the maximum number of pages you can buy.
 
 <br>
+
+---
+
 <br>
 
 ## Key Observations
@@ -79,6 +82,9 @@ Given that the total price of books is at most $X$ $(1\leq X\leq 105)$, and that
 - By definition, with a budget of $X$, the answer will be stored in **$dp[N][X]$**, or $dp[X]$ for the last array.
 
 <br>
+
+---
+
 <br>
 
 ## Code
@@ -138,3 +144,5 @@ int main() {
     cout<<dp[x];
 }
 ```
+
+---TAKEAWAYS---

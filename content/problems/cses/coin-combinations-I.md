@@ -16,6 +16,9 @@ You have a set of $N$ coin values $(1\leq N\leq 100)$ in array $C$ $(1\leq C_i\l
 Given that the order of the coins you choose matters, and that you can use as many of each coin as you wish, calculate the number of distinct ways you can produce the sum $X$ $(1\leq X\leq 10^6)$, mod $10^9+7$.
 
 <br>
+
+---
+
 <br>
 
 ## Key Observations
@@ -76,6 +79,9 @@ Given that the order of the coins you choose matters, and that you can use as ma
     - In this case, because of the order-matters condition, this works. (It won't for Coin Combinations II)
 
 <br>
+
+---
+
 <br>
 
 ## Code
@@ -104,3 +110,5 @@ int main() {
     cout<<dp[X]<<endl;
 }
 ```
+
+---TAKEAWAYS---

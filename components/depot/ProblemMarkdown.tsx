@@ -7,27 +7,18 @@ import remarkMath from "remark-math";
 import rehypeRaw from "rehype-raw";
 import rehypeKatex from "rehype-katex";
 
-import path from "path";
-import fs from "fs/promises";
-import matter from "gray-matter";
 import {DiffTag, Tag} from "./Tag";
 
-export default async function ProblemMarkdown({slug}: {slug: string}) {
-    const filePath = path.join(process.cwd(), "content/problems", `${slug}.md`);
+export interface ProblemMeta {
+    title: string,
+    source: string,
+    link: string,
+    difficulty: number,
+    concept: string,
+    tags: string[],
+};
 
-    let raw="";
-    try { 
-        raw=await fs.readFile(filePath,"utf8");
-    }
-    catch { 
-        return (
-            <div className={styles.container}>
-                404: Not found
-            </div>
-        ); 
-    }
-
-    const {data, content} = matter(raw);
+export async function ProblemMarkdown({data, content}: {data: ProblemMeta, content: string}) {
 
     return (
         <article className={`${styles.container} prose`}>

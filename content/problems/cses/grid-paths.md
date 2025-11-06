@@ -17,6 +17,9 @@ Any blank cell (denoted by ".") on the grid can be moved to. Some have "traps", 
 Determine the number of paths from the upper-left cell to the lower-right cell such that you can only move right or down, modulo $10^9+7$.
 
 <br>
+
+---
+
 <br>
 
 ## Key Observations
@@ -66,6 +69,9 @@ $dp[i][j]$ denotes the number of valid paths from $(i,j)$ to the lower-right squ
 **Answer:** by definition, $dp[0][0]$ contains the distance from $(0,0)$ to $(N-1,N-1)$.
 
 <br>
+
+---
+
 <br>
 
 ## Code
@@ -108,3 +114,5 @@ int main() {
     }
 }
 ```
+
+---TAKEAWAYS---

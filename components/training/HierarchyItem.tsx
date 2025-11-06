@@ -25,7 +25,7 @@ const HierarchyItem = ({name, slug}: {name: string, slug: string}) => {
           </Link>
           <div 
             className={`${styles.caret}`}
-            onClick={toggle} />
+            onClick={toggle}></div>
         </div>
         <div className={`${styles.menu} ${(isOpen)?"block":"hidden"}`}>
           {subsubs.map((subsubtopic,i) => (

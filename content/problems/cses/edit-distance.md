@@ -16,6 +16,9 @@ The edit distance is defined as the minimum number of operations (adding, removi
 Given two strings of capital letters of length $N$ and $M$ $(1\leq N,M\leq 5000)$, determine the edit distance between them.
 
 <br>
+
+---
+
 <br>
 
 ## Key Observations
@@ -72,6 +75,9 @@ Given two strings of capital letters of length $N$ and $M$ $(1\leq N,M\leq 5000)
 - This makes sense because at each point, to try and make the two characters equal, we can either chose to add, remove, or replace a character.
 
 <br>
+
+---
+
 <br>
 
 ## Code
@@ -128,3 +134,5 @@ int main() {
     cout<<dp[n][m];
 }
 ```
+
+---TAKEAWAYS---

@@ -18,6 +18,9 @@ On each move, you can select a rectangle and cut it into two with integer side l
 Determine the minimum number of moves needed to cut it into only squares.
 
 <br>
+
+---
+
 <br>
 
 ## Key Observations
@@ -65,6 +68,9 @@ $dp[i][j]$ represents the number of splits needed to turn a rectangle of proport
 **Answer:** $dp[A][B]$ returns the result for the full rectangle of proportions $A\times B$.
 
 <br>
+
+---
+
 <br>
 
 ## Code
@@ -115,3 +121,5 @@ int main() {
     cout<<dp[a][b];
 }
 ```
+
+---TAKEAWAYS---

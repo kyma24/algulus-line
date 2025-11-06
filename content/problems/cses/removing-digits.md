@@ -18,6 +18,9 @@ In one operation, you can subtract one of its digit from itself.
 How many steps are required to make $N$ equal to 0?
 
 <br>
+
+---
+
 <br>
 
 ## Key Observations
@@ -59,6 +62,9 @@ $dp[x]$ represents the minimum operations needed to reduce $x$ to $0$.
 **Answer:** by definition, $dp[N]$ is the result for number $N$.
 
 <br>
+
+---
+
 <br>
 
 ## Code
@@ -114,3 +120,5 @@ int main() {
     cout<<dp[n];
 }
 ```
+
+---TAKEAWAYS---

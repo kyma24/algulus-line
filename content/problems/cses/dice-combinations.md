@@ -16,6 +16,9 @@ You're allowed to throw a dice with values 1-6 any number of times.
 Count the number of ways to construct sum $N$ $(1\leq N\leq 106)$, mod $10^9+7$.
 
 <br>
+
+---
+
 <br>
 
 ## Key Observations
@@ -57,6 +60,9 @@ Count the number of ways to construct sum $N$ $(1\leq N\leq 106)$, mod $10^9+7$.
 **Answer:** by definition, $dp[N]$ stores the number of ways to construct $N$.
 
 <br>
+
+---
+
 <br>
 
 ## Code
@@ -83,3 +89,5 @@ int main() {
     cout<<dp[n]<<endl;
 }
 ```
+
+---TAKEAWAYS---

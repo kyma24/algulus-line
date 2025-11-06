@@ -1,12 +1,13 @@
 .container {
     width: 100vw;
-    height: 100vh;
+    height: 100dvh;
     
     display: flex;
     flex-direction: column;
     align-items: center;
 
     background: linear-gradient(to bottom, var(--color-background) 0%, #09142A 75%);
+    overflow-x: hidden;
 }
 
 .article {

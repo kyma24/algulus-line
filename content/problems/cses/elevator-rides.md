@@ -18,6 +18,9 @@ The maximum weight capacity of the elevator is $X$ $(1\leq w_i​\leq X\leq 10^9
 Determine the minimum number of elevator rides needed to send everyone up.
 
 <br>
+
+---
+
 <br>
 
 ## Key Observations
@@ -70,6 +73,9 @@ $dp=best[i]$ stores...
 **Answer:** by definition, the result should be stored in $best[(1<<N)-1].first$.
 
 <br>
+
+---
+
 <br>
 
 ## Code
@@ -117,3 +123,5 @@ int main() {
     cout<<best[(1<<N)-1].first<<endl;
 }
 ```
+
+---TAKEAWAYS---

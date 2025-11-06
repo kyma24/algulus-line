@@ -16,6 +16,9 @@ The input contains $T$ test cases $(1\leq T\leq 100)$.
 For each of them, you're tasked with building a tower of dimensions $2\times N$ $(1\leq N\leq 10^6)$ out of rectangles with integer widths and heights. Determine the number of different towers that can be built, mod $10^9+7$.
 
 <br>
+
+---
+
 <br>
 
 ## Key Observations
@@ -75,6 +78,9 @@ For each of them, you're tasked with building a tower of dimensions $2\times N$ 
 - Since the only input is $N$, you *could* optimize further by storing the results for smaller values of $N$ and building up to larger values. 
 
 <br>
+
+---
+
 <br>
 
 ## Code
@@ -126,3 +132,5 @@ int main() {
     }
 }
 ```
+
+---TAKEAWAYS---

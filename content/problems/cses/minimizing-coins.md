@@ -16,6 +16,9 @@ You're given a set of $N$ $(1\leq N\leq 100)$ coins in array $C$ $(1\leq C_i\leq
 Find the minimum number of coins needed to produce a sum of money $X$ $(1\leq X\leq 10^6).
 
 <br>
+
+---
+
 <br>
 
 ## Key Observations
@@ -61,6 +64,9 @@ $dp[i]$ represents the minimum coins needed to make a sum of $i$.
 **Answer:** $dp[X]$, or -1 if impossible (for instance, if all coins have a greater value than the target sum)
 
 <br>
+
+---
+
 <br>
 
 ## Code
@@ -89,3 +95,5 @@ int main() {
     cout<<((dp[x]!=mmax)?dp[x]:-1)<<endl;
 }
 ```
+
+---TAKEAWAYS---

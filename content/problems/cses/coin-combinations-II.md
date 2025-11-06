@@ -16,6 +16,9 @@ You have a set of $N$ coin values $(1\leq N\leq 100)$ in array $C$ $(1\leq C_i\l
 Given that the order of the coins you choose **does not matter**, and that you can use as many of each coin as you wish, calculate the number of distinct ways you can produce the sum $X$ $(1\leq X\leq 10^6)$, mod $10^9+7$.
 
 <br>
+
+---
+
 <br>
 
 ## Key Observations
@@ -95,6 +98,9 @@ Given that the order of the coins you choose **does not matter**, and that you c
     - Assuming that this condition is already true, if we consider the case for $dp[x]$, we'd only be adding $dp[x-C_i]$ at a time, so by induction the condition also applies to itself.
 
 <br>
+
+---
+
 <br>
 
 ## Code
@@ -172,3 +178,5 @@ int optimized() {
     cout<<dp[x];
 }
 ```
+
+---TAKEAWAYS---

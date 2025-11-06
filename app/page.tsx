@@ -6,11 +6,11 @@ import Footer from "@/components/Footer";
 export default function Home() {
   return (
     <div>
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
+      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start overflow-x-hidden">
         <MainNav />
         
         <div className="w-1/1 h-20" />
-        <div className="h-[30vh]" />
+        <div className="h-[30dvh]" />
 
         <StartSection />
         
