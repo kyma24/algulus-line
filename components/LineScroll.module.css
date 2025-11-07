@@ -121,6 +121,9 @@
     .fontSmall {
         font-size: 12px;
     }
+    .fontSmaller {
+        font-size: 14px;
+    }
     .fontBig {
         font-size: 20px;
         line-height: 1;

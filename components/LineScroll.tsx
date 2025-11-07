@@ -102,7 +102,7 @@ const LineScroll = () => {
                               <p className={`${styles.fontSmall} font-[chillax] font-bold`}>STATION {i}</p>
                               <h2 className={`${styles.fontBig} font-[outfit] font-semibold`}>{topics[i].name}</h2>
                         </div>
-                        <div className={`${styles.textBox} flex flex-row flex-wrap font-[outfit] font-medium`}>
+                        <div className={`${styles.textBox} ${styles.fontSmaller} flex flex-row flex-wrap font-[outfit] font-medium`}>
                               {topics[i].subtopics.map((topic, j) => (
                                     (j<topics[i].subtopics.length-1) ? (topic + " • ") : (topic)
                               ))}
