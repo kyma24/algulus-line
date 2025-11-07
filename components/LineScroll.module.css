@@ -99,16 +99,6 @@
     line-height: 1.1;
 }
 
-@media (max-width: 750px) {
-    .fontSmall {
-        font-size: 12px;
-    }
-    .fontBig {
-        font-size: 20px;
-        line-height: 1;
-    }
-}
-
 .button {
     width: fit-content;
     padding: 10px;
@@ -122,6 +112,22 @@
     background-color: #989FAE;
     box-shadow: none;
     transform: translateY(5px);
+}
+
+@media (max-width: 750px) {
+    .topicBox {
+        gap: 10px;
+    }
+    .fontSmall {
+        font-size: 12px;
+    }
+    .fontBig {
+        font-size: 20px;
+        line-height: 1;
+    }
+    .button {
+        padding: 8px;
+    }
 }
 
 .pin {
