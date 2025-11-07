@@ -2,6 +2,7 @@ import React from 'react';
 import styles from "../depot.module.css";
 
 import MainNav from '@/components/MainNav';
+import TakeawayBar from '@/components/depot/TakeawayBar';
 import { ProblemMarkdown, ProblemMeta } from '@/components/depot/ProblemMarkdown';
 
 import path from "path";
@@ -53,17 +54,9 @@ export default async function Page(
       <MainNav />
 
       <main className={styles.article}>
+        <TakeawayBar content={takeaways} />
         <ProblemMarkdown data={metadata} content={mainContent} />
       </main>
     </div>
   );
-}
-
-function TakeawaySection(content: string) {
-  
-  return (
-    <div className={styles.takeaways}>
-    </div>
-  );
-
 }

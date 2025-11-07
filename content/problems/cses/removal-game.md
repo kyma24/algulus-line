@@ -11,7 +11,7 @@ tags: ["dp", "game"]
 
 ## Problem Deconstruction
 
-There is a list $X$ $(−10^9\leq X_i\leq 10^9) of $N$ $(1\leq N\leq 5000)$ numbers.
+There is a list $X$ $(−10^9\leq X_i\leq 10^9)$ of $N$ $(1\leq N\leq 5000)$ numbers.
 
 Two players alternate moves. One move is removing either the first or last number from the list, and adding it to the current player's score.
 
