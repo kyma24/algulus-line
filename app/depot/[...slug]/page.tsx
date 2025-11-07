@@ -58,3 +58,12 @@ export default async function Page(
     </div>
   );
 }
+
+function TakeawaySection(content: string) {
+  
+  return (
+    <div className={styles.takeaways}>
+    </div>
+  );
+
+}

@@ -1,6 +1,6 @@
 .container {
     height: 115px;
-    width: 100vw;
+    width: 100%;
 
     position: sticky;
     top: 0;
