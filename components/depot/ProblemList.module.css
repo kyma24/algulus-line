@@ -45,7 +45,7 @@
 .item {
     display: flex;
     flex-direction: row;
-    gap: 20px;
+    gap: 15px;
     align-items: center;
 
     width: 100%;
@@ -102,7 +102,7 @@
 .diffCol {
     height: 30px;
     aspect-ratio: 1/1;
-    padding: 8px;
+    padding: 8px 16px 8px 0px;
 }
 
 .tagsCol {

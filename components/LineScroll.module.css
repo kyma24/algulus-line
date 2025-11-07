@@ -100,6 +100,9 @@
 }
 
 @media (max-width: 750px) {
+    .fontSmall {
+        font-size: 12px;
+    }
     .fontBig {
         font-size: 20px;
         line-height: 1;
