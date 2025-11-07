@@ -10,6 +10,10 @@
     overflow-x: hidden;
 }
 
+.interface {
+    margin-top: 20px;
+}
+
 .article {
     position: relative;
 
