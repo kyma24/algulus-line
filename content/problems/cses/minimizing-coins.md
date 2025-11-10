@@ -11,7 +11,7 @@ tags: ["dp", "dpendence"]
 
 ## Problem Deconstruction
 
-You're given a set of $N$ $(1\leq N\leq 100)$ coins in array $C$ $(1\leq C_i\leq 10^6).
+You're given a set of $N$ $(1\leq N\leq 100)$ coin values in array $C$ $(1\leq C_i\leq 10^6).
 
 Find the minimum number of coins needed to produce a sum of money $X$ $(1\leq X\leq 10^6).
 
@@ -97,3 +97,7 @@ int main() {
 ```
 
 ---TAKEAWAYS---
+
+## make exact sum with set of values:
+
+##### ● to use multiple of same value, iterate over all coins for each sum

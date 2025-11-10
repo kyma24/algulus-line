@@ -182,6 +182,8 @@ int main() {
 
 ---TAKEAWAYS---
 
-## ● testing
+## count valid arrangements + replace fixed values under constraints:
 
-## ● testing 2
+##### ● use standard prefix dp
+
+##### ● apply constraints in iteration

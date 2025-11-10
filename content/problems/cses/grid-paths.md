@@ -116,3 +116,7 @@ int main() {
 ```
 
 ---TAKEAWAYS---
+
+## paths on a grid:
+
+##### ● build off of adjacent traversed grid cells

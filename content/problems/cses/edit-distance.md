@@ -136,3 +136,9 @@ int main() {
 ```
 
 ---TAKEAWAYS---
+
+## string operations + distances:
+
+##### ● deconstruct into characters, substrings
+
+##### ● add, remove, replace character from current state to propogate

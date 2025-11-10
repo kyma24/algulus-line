@@ -125,3 +125,11 @@ int main() {
 ```
 
 ---TAKEAWAYS---
+
+## minimum groups with value cap (small N):
+
+##### ● bitmask, process all possible subsets
+
+##### ● track min groups + total volume
+
+##### ● propogate by activating bits

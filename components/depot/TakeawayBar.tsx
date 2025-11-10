@@ -18,29 +18,27 @@ export default function TakeawayBar({content} : {content: string}) {
     }
   
     return (
-        <>
-            <div className={styles.overlay}>
-                <button 
-                    className={styles.takeaways}
-                    onClick={toggleNote}>
-                    <div className={noteOpen ? styles.upCaret : styles.downCaret} />
-                    <p>TAKE AWAYS</p>
-                    <div className={noteOpen ? styles.upCaret : styles.downCaret} />
-                </button>
-                <div className={`${noteOpen ? styles.openContent : styles.closeContent}`}>
-                    <div className={styles.popOut}>
-                        <article className={`${styles.bodyText} prose`}>
-                            <ReactMarkdown 
-                                remarkPlugins={[remarkGfm,remarkMath]}
-                                rehypePlugins={[rehypeRaw,rehypeKatex]} 
-                                components={markdownComponents}>
-                                {content}
-                            </ReactMarkdown>
-                        </article>
-                    </div>
+        <div className={styles.overlay}>
+            <button 
+                className={styles.takeaways}
+                onClick={toggleNote}>
+                <div className={noteOpen ? styles.upCaret : styles.downCaret} />
+                <p>TAKE AWAYS</p>
+                <div className={noteOpen ? styles.upCaret : styles.downCaret} />
+            </button>
+            <div className={`w-1/1 ${noteOpen ? styles.openContent : styles.closeContent}`}>
+                <div className={styles.popOut}>
+                    <article className={`${styles.bodyText} prose`}>
+                        <ReactMarkdown 
+                            remarkPlugins={[remarkGfm,remarkMath]}
+                            rehypePlugins={[rehypeRaw,rehypeKatex]} 
+                            components={markdownComponents}>
+                            {content}
+                        </ReactMarkdown>
+                    </article>
                 </div>
             </div>
-        </>
+        </div>
     );
 
 }

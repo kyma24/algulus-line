@@ -146,3 +146,9 @@ int main() {
 ```
 
 ---TAKEAWAYS---
+
+## maximum achievable value within a set cost:
+
+##### ● use include / don't include method
+
+##### ● iterate over price

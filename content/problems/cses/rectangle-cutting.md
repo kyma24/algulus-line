@@ -123,3 +123,9 @@ int main() {
 ```
 
 ---TAKEAWAYS---
+
+## minimum moves + geometry (rectangles):
+
+##### ● propogate from squares (0 splits)
+
+##### ● consider all possible splits

@@ -74,7 +74,7 @@ $dp[i][a]$ represents the number of ways to make a set of sum $a$ given only the
 
 ## Comments
 
-- Another way to address the overcounting issue is to restrict one number, say $1$ to its own set, and count how many of those work.
+- Another way to address the overcounting issue is to restrict one number, say, $1$, to its own set, and count how many of those work.
 
 - We can do that in the dp by searching for the number of sets that don't contain $1$.
 
@@ -144,3 +144,9 @@ int main() {
 ```
 
 ---TAKEAWAYS---
+
+## # of ways to split into equal sums:
+
+##### ● target sum for each subset is $\frac{total}{2}$
+
+##### ● count subsets summing to target, / 2

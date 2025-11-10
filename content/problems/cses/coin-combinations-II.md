@@ -180,3 +180,11 @@ int optimized() {
 ```
 
 ---TAKEAWAYS---
+
+## combos of distinct objects (infinite) + sum constraint + order doesn't matter:
+
+##### ● iterate over next object to use, then sum
+
+##### ● use include / don't include method
+
+##### ● build off previous values in same object iteration

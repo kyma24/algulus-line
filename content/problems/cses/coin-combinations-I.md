@@ -112,3 +112,7 @@ int main() {
 ```
 
 ---TAKEAWAYS---
+
+## combos of distinct objects (infinite) + sum constraint + order matters:
+
+##### ● iterate over sum, then the next object to use

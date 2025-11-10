@@ -115,3 +115,9 @@ int main() {
 ```
 
 ---TAKEAWAYS---
+
+## time ranges + no overlap + max reward:
+
+##### ● compress times to only start/end points
+
+##### ● build off normally on altered points

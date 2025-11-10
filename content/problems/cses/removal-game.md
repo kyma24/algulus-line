@@ -148,3 +148,9 @@ int main() {
 ```
 
 ---TAKEAWAYS---
+
+## 2 player game + optimal moves + maximum score:
+
+##### ● use state for either player's turn (optimal)
+
+##### ● redefine score as gain + loss

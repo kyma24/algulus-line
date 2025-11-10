@@ -134,3 +134,9 @@ int main() {
 ```
 
 ---TAKEAWAYS---
+
+## # of valid arrangements + geometry (rectangles):
+
+##### ● decompose pieces
+
+##### ● use rows / columns

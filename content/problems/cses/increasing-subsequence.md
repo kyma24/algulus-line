@@ -180,3 +180,9 @@ int main() {
 ```
 
 ---TAKEAWAYS---
+
+## longest increasing subsequence:
+
+##### ● store optimal ending value for increasing subsequence of length $i$
+
+##### ● update/add to length if found smaller ending value

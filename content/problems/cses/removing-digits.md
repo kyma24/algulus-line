@@ -122,3 +122,7 @@ int main() {
 ```
 
 ---TAKEAWAYS---
+
+## number's digits + steps to reach 0:
+
+##### ● iterate over each digit ($log_{10}$) to subtract

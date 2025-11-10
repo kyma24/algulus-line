@@ -91,3 +91,9 @@ int main() {
 ```
 
 ---TAKEAWAYS---
+
+## # of valid arrangements + sum constraint:
+
+##### ● use standard prefix dp
+
+##### ● track sum, iterate over values

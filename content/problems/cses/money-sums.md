@@ -142,3 +142,7 @@ int main() {
 ```
 
 ---TAKEAWAYS---
+
+## # of possible sums:
+
+##### ● boolean for each possible value (below max)
