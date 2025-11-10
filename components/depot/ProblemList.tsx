@@ -13,16 +13,18 @@ const ProblemList = ({allProblemPaths}: {allProblemPaths: string[]}) => {
     <div className={styles.container}>
       <TagsFilter />
 
-      <table className={styles.list}>
-        <thead>
-          <ListHeader />
-        </thead>
-        <tbody>
-          {allProblemPaths.map((path,i) => (
-            <ProblemItem key={i} ind={i} path={path} />
-          ))}
-        </tbody>
-      </table>
+      <div className={styles.wrapper}>
+        <table className={styles.list}>
+          <thead>
+            <ListHeader />
+          </thead>
+          <tbody /*className={styles.listBody}*/>
+            {allProblemPaths.map((path,i) => (
+              <ProblemItem key={i} ind={i} path={path} />
+            ))}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 };

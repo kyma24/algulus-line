@@ -34,10 +34,7 @@ export async function ProblemMarkdown({data, content}: {data: ProblemMeta, conte
                         </a>
                     </div>
                 </div>
-                <div className={styles.metadata}>
-                    <DiffTag diff={data.difficulty} />
-                    <TagsDisplay tags={data.tags} />
-                </div>
+                <TagsDisplay difficulty={data.difficulty} tags={data.tags} />
             </div>
             <ReactMarkdown 
                 remarkPlugins={[remarkGfm,remarkMath]}
@@ -50,9 +47,10 @@ export async function ProblemMarkdown({data, content}: {data: ProblemMeta, conte
     );
 }
 
-const TagsDisplay = ({tags}: {tags: string[]}) => {
+const TagsDisplay = ({difficulty, tags}: {difficulty: number, tags: string[]}) => {
     return (
         <span className={styles.tagContainer}>
+            <DiffTag diff={difficulty} />
             {tags.map((name,i) => (
                 <Tag key={i} name={name} />
             ))}

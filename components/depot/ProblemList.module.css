@@ -8,11 +8,23 @@
     align-items: center;
 }
 
-.list {
-    width: 80%;
+.wrapper {
+    width: 100%;
     max-width: 1000px;
+    overflow-x: scroll;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.list {
+    width: 1200px;
     border-radius: 50px;
     table-layout: fixed;
+}
+
+.listBody {
+    display: block;
+    height: 500px;
+    overflow-y: scroll;
 }
 
 .header {
@@ -21,7 +33,7 @@
     gap: 15px;
     align-items: center;
 
-    width: 100%;
+    min-width: 750px;
     height: 40px;
 
     font: 600 16px Chillax;
@@ -32,11 +44,10 @@
     border-radius: 10px 10px 0 0;
 }
 
-@media (max-width: 800px) {
-    .list {
-        width: 100%;
+@media (max-width: 1000px) {
+    .wrapper {
+        border-radius: 0;
     }
-
     .header {
         border-radius: 0;
     }
@@ -47,8 +58,8 @@
     flex-direction: row;
     gap: 15px;
     align-items: center;
-
-    width: 100%;
+    
+    min-width: 750px;
     height: 35px;
 
     font: 16px Outfit;
@@ -64,7 +75,7 @@
 }
 
 .indexCol {
-    width: 30px;
+    min-width: 30px;
     text-align: left;
     padding: 0 0 0 10px;
     
@@ -77,8 +88,7 @@
 }
 
 .titleCol {
-    width: 30%;
-    /*min-width: 200px;*/
+    width: 250px;
     text-align: left;
 
     white-space: nowrap;
@@ -91,7 +101,7 @@
 }
 
 .sourceCol {
-    width: 75px;
+    min-width: 75px;
     text-align: left;
 
     white-space: nowrap;
@@ -108,6 +118,7 @@
 .tagsCol {
     flex: 1;
     text-align: left;
+    padding-right: 10px;
 
     white-space: nowrap;
     overflow: hidden;

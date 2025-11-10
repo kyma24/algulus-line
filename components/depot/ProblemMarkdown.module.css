@@ -33,20 +33,15 @@
     gap: 10px;
 }
 
-.metadata {
-    height: 30px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 10px;
-}
-
 .tagContainer {
     width: 100%;
 
     display: flex;
     flex-direction: row;
+    align-items: center;
     gap: 10px;
+
+    flex-wrap: wrap;
 }
 
 .linkBox {
