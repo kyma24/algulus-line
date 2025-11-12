@@ -13,7 +13,7 @@ tags: ["dp", "knapsack"]
 
 You have $N$ different books $(1\leq N\leq 1000)$, each with its own price $H_i$ $(1\leq H_i\leq 1000)$ and number of pages $S_i$​ $(1\leq S_i\leq 1000)$.
 
-Given that the total price of books is at most $X$ $(1\leq X\leq 105)$, and that each book can be bought at most once, determine the maximum number of pages you can buy.
+Given that the total price of books is at most $X$ $(1\leq X\leq 10^5)$, and that each book can be bought at most once, determine the maximum number of pages you can buy.
 
 <br>
 

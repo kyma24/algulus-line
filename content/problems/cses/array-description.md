@@ -11,7 +11,7 @@ tags: ["dp"]
 
 ## Problem Deconstruction
 
-The input is an array $X$ with $N$ integers$(1\leq N\leq 105)$, each with a value between $1$ and $M$ $(1\leq M\leq 100)$.
+The input is an array $X$ with $N$ integers $(1\leq N\leq 10^5)$, each with a value between $1$ and $M$ $(1\leq M\leq 100)$.
 
 Given that the value $0$ can be replaced with any number, and that the absolute difference between two adjacent values must be at most $1$, determine the **number of arrays that $X$ could be**.
 

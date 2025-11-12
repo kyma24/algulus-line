@@ -11,9 +11,9 @@ tags: ["dp", "dpendence"]
 
 ## Problem Deconstruction
 
-You're given a set of $N$ $(1\leq N\leq 100)$ coin values in array $C$ $(1\leq C_i\leq 10^6).
+You're given a set of $N$ $(1\leq N\leq 100)$ coin values in array $C$ $(1\leq C_i\leq 10^6)$.
 
-Find the minimum number of coins needed to produce a sum of money $X$ $(1\leq X\leq 10^6).
+Find the minimum number of coins needed to produce a sum of money $X$ $(1\leq X\leq 10^6)$.
 
 <br>
 
@@ -45,7 +45,7 @@ $dp[i]$ represents the minimum coins needed to make a sum of $i$.
 
 <br>
 
-**Base Case:** $dp[0]=0$ (no coins needed to make $0)
+**Base Case:** $dp[0]=0$ (no coins needed to make $0$)
 
 <br>
 

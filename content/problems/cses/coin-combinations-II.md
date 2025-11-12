@@ -59,7 +59,7 @@ Given that the order of the coins you choose **does not matter**, and that you c
 
 - Here, $ways[i][x]$ is the number of ways to make sum $x$ considering the first $i$ coins (including $C_i$).
 
-    - With optimization: **ways[x] = ways[x] + ways[x-C_i]** (remember to check bounds)
+    - With optimization: **$ways[x] = ways[x] + ways[x-C_i]$** (remember to check bounds)
 
 <br>
 
