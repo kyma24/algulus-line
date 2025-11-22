@@ -67,7 +67,7 @@
 }
 
 .upCaret {
-    background: url("/images/up.svg") center / contain;
+    background: url("/images/up.svg") center / contain no-repeat;
     height: 50%;
     aspect-ratio: 1/1;
     width: auto;
@@ -75,7 +75,7 @@
 }
 
 .downCaret {
-    background: url("/images/down.svg") center / contain;
+    background: url("/images/down.svg") center / contain no-repeat;
     height: 50%;
     aspect-ratio: 1/1;
     width: auto;

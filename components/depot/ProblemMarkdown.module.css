@@ -26,7 +26,7 @@
 }
 
 .titleBox {
-    height: 30px;
+    height: fit-content;
     display: flex;
     flex-direction: row;
     align-items: end;
@@ -51,7 +51,7 @@
 }
 
 .linkArrow {
-    background: url("/images/arrow.svg") center/contain;
+    background: url("/images/arrow.svg") center/contain no-repeat;
     height: 100%;
     aspect-ratio: 1/1;
 }

@@ -22,16 +22,18 @@ export const TopicSidenav = () => {
   return (
     <div className={styles.container}>
 
-      <div className={styles.sidebar}>
-          {[0,1,2,3,4,5,6,7].map((i) => (
-          <button 
-              key={i}
-              className={styles.navButton}
-              onClick={() => handleSideOpen(i)}>
-              <div className={`w-1/1 aspect-square`} style={{ backgroundColor: topics[i].color }}/>
-              <p className="text-sm text-[#bdc2cb] font-[outfit] font-semibold">{topics[i].short}</p>
-          </button>
-          ))}
+      <div className={styles.sidebarWrapper}>
+        <div className={styles.sidebar}>
+            {[0,1,2,3,4,5,6,7].map((i) => (
+            <button 
+                key={i}
+                className={styles.navButton}
+                onClick={() => handleSideOpen(i)}>
+                <div className={`w-1/1 aspect-square`} style={{ backgroundColor: topics[i].color }}/>
+                <p className={`${styles.buttonLabel}`}>{topics[i].short}</p>
+            </button>
+            ))}
+        </div>
       </div>
 
       <div className={styles.maskWrapper}>

@@ -7,7 +7,7 @@
 }
 
 .title {
-    background: url("/images/title.svg") no-repeat;
+    background: url("/images/title.svg") center / contain no-repeat;
     height: 60%;
     aspect-ratio: 4567/498;
     

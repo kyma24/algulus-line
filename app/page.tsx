@@ -14,7 +14,7 @@ export default function Home() {
 
         <StartSection />
         
-        <div className="w-1/1 h-20" />
+        <div className="w-1/1 h-5" />
         <LineScroll />
 
         <Footer />

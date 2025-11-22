@@ -17,7 +17,7 @@
 }
 
 .navMark {
-    background: url("/images/nav_mark.svg") no-repeat center/contain;
+    background: url("/images/nav_mark.svg") center/contain no-repeat;
     animation: float 2s infinite ease-in-out;
 }
 
@@ -64,7 +64,7 @@
     z-index: 10;
 
     content: "";
-    background: url("/images/ticket_end.svg") no-repeat center/contain;
+    background: url("/images/ticket_end.svg") center/contain no-repeat;
 }
 
 .button {
@@ -76,11 +76,11 @@
     aspect-ratio: 64/19;
     
     content: "";
-    background: url("/images/button_up.svg") no-repeat center/contain;
+    background: url("/images/button_up.svg") center/contain no-repeat;
 }
 
 .buttonDown {
-    background: url("/images/button_down.svg") no-repeat center/contain;
+    background: url("/images/button_down.svg") center/contain no-repeat;
 }
 
 .button:hover {
@@ -88,11 +88,11 @@
 }
 
 .button:not(.expanded):hover {
-    background: url("/images/button_hover.svg") no-repeat center/contain;
+    background: url("/images/button_hover.svg") center/contain no-repeat;
 }
 
 .dispenserBottom {
-    background: url("/images/dispense_bottom.svg") no-repeat center/contain;
+    background: url("/images/dispense_bottom.svg") center/contain no-repeat;
     z-index: 0;
 }
 

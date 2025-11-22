@@ -130,11 +130,12 @@
     }
     .button {
         padding: 8px;
+        font-size: 14px;
     }
 }
 
 .pin {
-    background: url("/images/pin.svg");
+    background: url("/images/pin.svg") center / contain no-repeat;
     height: 150px;
     aspect-ratio: 1/1;
     transform: translate(-20px, -10px);

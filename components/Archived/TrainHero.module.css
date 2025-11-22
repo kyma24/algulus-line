@@ -20,7 +20,7 @@
 }
 
 .mountain {
-    background: url("/images/mountain2.svg") no-repeat center/contain;
+    background: url("/images/mountain2.svg") center/contain no-repeat;
     width: 50%;
     aspect-ratio: 2/1;
     height: auto;
@@ -29,7 +29,7 @@
 }
 
 .train {
-    background: url("/images/train.svg") no-repeat center/contain;
+    background: url("/images/train.svg") center/contain no-repeat;
     width: 30%;
     aspect-ratio: 1/1;
     height: auto;

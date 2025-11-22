@@ -4,21 +4,39 @@
     height: 100%;
 }
 
-.sidebar {
+.sidebarWrapper {
     height: 100%;
+    overflow-y: scroll;
+    scrollbar-width: none;
+}
+
+.sidebar {
+    height: fit-content;
     width: 80px;
 
     display: flex;
     flex-direction: column;
-    gap: calc(min(30px, max(3%, 10px)));
+    gap: 1em;
     padding: 20px;
 }
 
 .navButton {
     width: 100%;
-    aspect-ratio: 1 /1;
+    aspect-ratio: 1/1;
 
     cursor: pointer;
+}
+
+.buttonLabel {
+    width: fit-content;
+    font-size: 14px;
+    color: #bdc2cb;
+    font-family: Outfit;
+    font-weight: 600;
+
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0%);
 }
 
 .panel {
@@ -26,7 +44,7 @@
     top: 0; left: 0;
     height: 100%;
     width: 250px;
-    overflow: hidden;
+    overflow-y: auto;
     background: #1d1e20d1;
     will-change: transform;
 
@@ -64,6 +82,9 @@
 }
 
 .bar {
+    position: sticky;
+    top: 0px;
+
     height: 30px;
     width: 100%;
 
@@ -73,7 +94,8 @@
     justify-content: space-between;
     align-items: center;
 
-    background: #bdc2cb20;
+    background: #303132;
+    z-index: 1000;
 }
 
 .board {
@@ -95,5 +117,25 @@
 }
 
 .hierarchy {
+    height: fit-content;
     padding-top: 10px;
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 50px;
+    }
+    .sidebar {
+        width: 50px;
+        padding: 10px;
+    }
+    .buttonLabel {
+        font-size: 12px;
+    }
+    .board {
+        width: calc(100% - 50px);
+    }
+    .maskWrapper {
+        left: 50px;
+    }
 }

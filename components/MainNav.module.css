@@ -74,7 +74,7 @@
 }
 
 .face {
-    background: url("/images/face.svg") center / contain;
+    background: url("/images/face.svg") center / contain no-repeat;
     height: 75%;
     aspect-ratio: 1/1;
     width: auto;
